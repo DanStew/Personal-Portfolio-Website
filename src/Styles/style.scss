@@ -1,0 +1,61 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+p{
+    margin: 0;
+}
+
+.banner{
+    background-color: black;
+    width: 100vw;
+    height: 10vh;
+}
+
+.screen{
+    height: 100%;
+    width: 100vw;
+    min-height: 90vw;
+
+    &.HomeScreen{
+        background-color: purple;
+    }
+
+    &.AboutMe{
+        background-color: red;
+    }
+
+    &.Skills{
+        background-color: blue;
+    }
+
+    &.Projects{
+        background-color: green;
+    }
+
+    &.Experience{
+        background-color: yellow;
+    }
+
+    &.Footer{
+        background-color: brown;
+    }
+}
+
+//Code to animate in the sections, as you scroll down to them
+.reveal{
+    position: relative;
+    transform: translateY(50px);
+    opacity : 0;
+    transition : all 2s ease;
+}
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
