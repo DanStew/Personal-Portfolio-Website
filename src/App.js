@@ -1,6 +1,7 @@
 import Home from "./Home";
+import "./Styles/mainSections.scss"
 import "./Styles/loader.scss"
-import "./Styles/style.scss"
+import "./Styles/headerAndFooter.scss"
 
 function App() {
   return (

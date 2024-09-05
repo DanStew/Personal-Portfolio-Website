@@ -1,7 +1,8 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 
 //Importing components into the function
 import Header from "./Components/Header";
+import VerticalMenu from "./Components/VerticalMenu"
 import HomeScreen from "./Components/HomeScreen"
 import AboutMe from "./Components/AboutMe"
 import Skills from "./Components/Skills"
@@ -46,10 +47,13 @@ function Home(){
         window.addEventListener("scroll",handleScroll)
     },[])
 
+    //Useeffect to say whether vertical menu needs to be shown or not
+    const [showMenu, setShowMenu] = useState(false)
 
     return(
         <div>
-            <Header />
+            <Header showMenu={showMenu} setShowMenu={(val) => setShowMenu(val)}/>
+            <VerticalMenu showMenu={showMenu} setShowMenu={(val) => setShowMenu(val)}/>
             <div className="mainBody">
                 <div><HomeScreen /></div>
                 <div className="reveal"><AboutMe/></div>

@@ -1,6 +1,6 @@
 function AboutMe(){
     return(
-        <div className="AboutMe screen">
+        <div id="AboutMe" className="screen">
             AboutMe
         </div>
     )

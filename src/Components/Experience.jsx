@@ -1,6 +1,6 @@
 function Experience(){
     return(
-        <div className="Experience screen reveal">
+        <div id="Experience" className="screen">
             Experience
         </div>
     )

@@ -1,0 +1,159 @@
+//Setting up the media queries for the website
+@media screen and (min-width : 1360px) {
+    .verticalBanner{display: none;}
+    .horizontalBanner{display: flex;}
+    .menu{display:none}
+}
+@media screen and (min-width : 1100px) and (max-width : 1360px) {
+    .verticalBanner{display: none;}
+    .horizontalBanner{display: flex;}
+    .menu{display:none}
+}
+@media screen and (min-width: 800px) and (max-width : 1100px) {
+    .horizontalBanner{display:none}
+    .verticalBanner{display:flex}
+    .menu{display:flex}
+}
+@media screen and (max-width : 800px) {
+    .horizontalBanner{display: none;}
+    .verticalBanner{display:flex}
+    .menu{display:flex}
+}
+
+.banner{
+
+    &.Header{
+        /* This sticks the header at the top of the screen */
+        position: sticky;
+        top:0;
+        left:0;
+        /* This ensures that it is always at the front, ahead of other elements*/
+        z-index: 100;
+        width: 99vw;
+        height: 10vh;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .title{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .horizontalBanner{
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            
+            .tabs{
+                flex: 3 3;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .tab{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                    transition: all 1s;
+
+                    a{
+                        color: white;
+                        transition: all 1s;
+                    }
+
+                    /* Styling the tab to be different when active */
+                    &.active{
+                        background-color: rgb(255, 255, 255);
+                        height: calc(100% + 2vh);
+
+                        a{
+                            color: black;
+                        }
+                    }
+                    
+                    &:hover{
+                        background-color: rgb(142, 142, 142);
+                        height: calc(100% + 2vh);
+
+                        a{
+                            color: black;
+                        }
+                    }
+
+                    a{
+                        font-size: 30px;
+                        text-decoration: none;
+                        color: white;
+                    }
+                }
+                    
+            }
+        }
+
+        //Styling the vertical banner
+        .verticalBanner{
+            justify-content: center;
+            align-items: center;
+
+            .title{
+                text-align: left;
+            }
+
+            span{
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                text-align: right;
+                color: white;
+                font-size: 60px;
+                padding: 20px;
+            }
+        }
+
+    }
+
+    //Styling the vertical menu
+    &.menu{
+        position: fixed;
+        top: 10vh;
+        right: 0;
+        z-index: 100;
+        
+        .tabs{
+            ul{
+                list-style-type: none;
+                font-size: 32px;
+                margin: 0;
+                padding: 0;
+                
+                .listItem{
+                    background-color: rgb(57, 57, 57);
+                    cursor: pointer;
+                    text-align: center;
+                    padding: 10px;
+                    color: rgb(255, 255, 255);
+                    transition: all 1s;
+
+                    a{
+                        text-decoration: none;
+                        flex: 1 1;
+                        width: 100%;
+                        color: white;
+                    }
+
+                    &:hover{
+                        background-color: rgb(31, 31, 31);
+                    }
+                }
+    
+            }
+        }
+
+    }
+}

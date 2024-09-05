@@ -1,6 +1,6 @@
 function ContactMe(){
     return(
-        <div className="ContactMe screen">
+        <div id="ContactMe" className="screen">
             ContactMe
         </div>
     )

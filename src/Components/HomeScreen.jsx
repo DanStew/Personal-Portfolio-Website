@@ -1,6 +1,6 @@
 function HomeScreen(){
     return(
-        <div className="HomeScreen screen">
+        <div id="HomeScreen" className="screen">
             HomeScreen
         </div>
     )
