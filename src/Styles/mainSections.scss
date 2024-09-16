@@ -90,7 +90,55 @@ p{
     }
 
     &#Skills{
-        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 5vh;
+        margin-bottom: 3vh;
+
+        .skillsArea{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+
+            .skillsRow{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 5vw;
+    
+                .skill{
+                    height: 18vh;
+                    width: 18vh;
+                    background-color: rgb(75, 75, 75);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    gap: 5px;
+                    box-shadow: 4px 4px 4px 4px rgb(89, 89, 89);
+                    transition: transform 2s;
+
+                    img{
+                        height: 10vh;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+
+                    &:hover{
+                        transform: translateY(-2vh);
+                    }
+                }
+
+                .empty{
+                    height: 18vh;
+                    width: 18vh;
+                }
+            }
+        }
     }
 
     &#Projects{
