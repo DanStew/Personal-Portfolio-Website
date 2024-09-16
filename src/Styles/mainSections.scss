@@ -9,16 +9,19 @@ body{
     text-align: center;
     font-weight: 600;
     font-family: "Roboto", sans-serif;
+    background-color: rgb(152, 152, 152);
 }
 
 /* Making the default text styles for the page */
 p{
     margin: 0;
     padding: 0;
+    color: white;
 
     &.regular{font-size: 24px;}
     &.subheading{font-size: 32px;}
-    &.heading{font-size: 40px;}
+    &.heading{font-size: 60px;}
+    &.title{font-size: 80px;}
 }
 
 /* Code given to all flexItems */
@@ -34,36 +37,81 @@ p{
     min-height: 90vh;
 
     &#HomeScreen{
-        background-color: purple;
+        .homeScreenBody{
+            //Displaying the body over the animated background
+            position: relative;
+            top: 0;
+            left: 0;
+            height: 90vh;
+            z-index: 1;
+            padding: 50px;
+            padding-left: 10vw;
+            text-align: left;
+            line-height: 1.5;
+
+            .nameTitle{
+                padding-left: 20px;
+                font-style: italic;
+                color: yellow;
+            }
+
+            .HomeScreenInfo{
+                width: 70%;
+                margin-top: 2vh;
+                margin-bottom: 2vh;
+            }
+        }
     }
 
     &#AboutMe{
-        background-color: red;
+        margin-top: 20px;
+
+        .content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            .photoArea{
+                padding: 5%;
+                img{
+                    height: 40vh;
+                    width: 20vw;
+                    border: 2px solid black;
+                    border-radius: 25px;
+                }
+            }
+    
+            .infoArea{
+                padding: 5%;
+                flex: 3 3;
+            }
+        }
+
     }
 
     &#Skills{
-        background-color: blue;
+        
     }
 
     &#Projects{
-        background-color: green;
+    
     }
 
     &#Experience{
-        background-color: yellow;
+       
     }
 
     &#Footer{
-        background-color: brown;
+        
     }
 }
 
 //Code to animate in the sections, as you scroll down to them
 .reveal{
     position: relative;
-    transform: translateY(50px);
+    transform: translateY(20px);
     opacity : 0;
-    transition : all 2s ease;
+    transition : all 0.75s ease;
 }
 .reveal.active{
     transform: translateY(0px);

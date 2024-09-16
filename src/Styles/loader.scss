@@ -7,10 +7,11 @@
     width: 100vw;
     height : 100vh;
     display: flex;
+    z-index: 1000;
     justify-content: center;
     align-items: center;
     background-color: #f7f9fb;
-    transition: opacity 1s, visibility 1s;
+    transition: opacity 2s, visibility 2s;
 }
 
 
@@ -27,7 +28,7 @@
     border: 15px solid #dddddd;
     border-top-color: #7449f5;
     border-radius: 50%;
-    animation: loading 1s ease infinite;
+    animation: loading 2s ease infinite;
 }
 
 
