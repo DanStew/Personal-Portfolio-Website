@@ -27,8 +27,8 @@ function HomeScreen(){
                 <div className="HomeScreenLinks">
                     <p className="subheading">Check out my Socials : </p>
                     <button><span class="material-symbols-outlined">file_open</span> Download My CV</button>
-                    <img src={githubLogo} alt="Open my Github" />
-                    <img src={linkedInLogo} alt="Open my Linked In" />
+                    <img onClick={() => window.open("https://github.com/")}src={githubLogo} alt="Open my Github" />
+                    <img onClick={() => window.open("https://www.linkedin.com/in/daniel-stewart-025107257/")}src={linkedInLogo} alt="Open my Linked In" />
                 </div>
                 <button><a href="#AboutMe">Explore More about Me</a></button>
             </div>

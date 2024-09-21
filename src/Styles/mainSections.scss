@@ -17,11 +17,13 @@ p{
     margin: 0;
     padding: 0;
     color: white;
+    font-weight: 600;
 
-    &.regular{font-size: 24px;}
+    &.regular{font-size: 24px;font-weight: 500;}
     &.subheading{font-size: 32px;}
     &.heading{font-size: 60px;}
     &.title{font-size: 80px;}
+    &.skill{font-size: 24px;font-weight: 600;}
 }
 
 /* Code given to all flexItems */
@@ -35,6 +37,7 @@ p{
     height: 100%;
     width: 100vw;
     min-height: 90vh;
+    padding-bottom: 10vh;
 
     &#HomeScreen{
         .homeScreenBody{
@@ -142,7 +145,133 @@ p{
     }
 
     &#Projects{
-    
+        .mainProjectRow, .smallProjectRow{
+            padding-top: 5vh;
+            padding-bottom: 5vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .emptyMainProject{height:30vh;width:40vw;}
+        .emptySmallProject{height:20vh;width:25vw;}
+
+        .mainProjectRow{gap:10vw;}
+        .smallProjectRow{gap:5vw;}
+
+        .mainProject{
+            height: 30vh;
+            width: 40vw;
+            position: relative;
+            overflow-y: hidden;
+            box-shadow: 4px 4px 4px 4px rgb(58, 58, 58);
+
+            img{
+                height: 30vh;
+                width: 40vw;
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                
+            }
+
+            .projectContent{
+                height: 25vh;
+                width: 40vw;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                opacity: 0;
+                z-index: 2;
+                background-color: black;
+                transition: opacity 1s;
+            }
+            
+            &:hover{
+                .projectContent{
+                    opacity: 0.9;
+                    animation: moveUpContent 2s;
+                }
+            }
+
+            .buttonArea{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10px;
+                gap: 10%;
+
+                button{
+                    padding: 10px;
+                    width: 30%;
+                    border: none;
+                    border-radius: 25px;
+                    cursor: pointer;
+                    background-color: rgb(255, 255, 255);
+                    transition: background-color 1s;
+                    opacity: 1;
+                    color: black;
+                    font-size: 24px;
+                    font-weight: 600;
+
+                    &:hover{
+                        background-color: rgb(182, 182, 182);
+                    }
+                }
+            }
+            
+        }
+
+        .smallProject{
+            width: 25vw;
+            height: 20vh;
+            background-color: rgb(212, 212, 212);
+            box-shadow: 4px 4px 4px 4px rgb(58, 58, 58);
+            text-align-last: left;
+            padding: 10px;
+            transition: transform 2s;
+
+            p{
+                color: black;
+            }
+            
+            .headerLine{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 5px;
+                
+                img{
+                    cursor: pointer;
+                    height: 30px;
+                    width:30px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+            }
+
+            &:hover{
+                transform: translateY(-20px);
+            }
+        }
+
+        .skillsLine{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2vw;
+            padding: 5px;
+        }
+
+        .showMoreLess{
+            padding: 2vh 10vw 2vh 10vw;
+            border-radius: 20px;
+            border: none;
+            box-shadow: 4px 4px 4px 4px rgb(58, 58, 58);
+            cursor: pointer;
+            p{color: black;}
+        }
     }
 
     &#Experience{
@@ -164,4 +293,10 @@ p{
 .reveal.active{
     transform: translateY(0px);
     opacity: 1;
+}
+
+//Code to animate the content for main projects up
+@keyframes moveUpContent {
+    0% {transform: translateY(20px);}
+    100%{transform: translateY(0px);}
 }
