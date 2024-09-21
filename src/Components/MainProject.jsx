@@ -11,7 +11,7 @@ function MainProject({image,title,description,skills,liveLink,githubLink}){
                     {skills.map((skill) => {
                         return(
                             <div key={title+skill}>
-                                <p className={"skill " + skill}>{skill}</p>
+                                <p className={"boldRegular " + skill}>{skill}</p>
                             </div>    
                         )
                     })}

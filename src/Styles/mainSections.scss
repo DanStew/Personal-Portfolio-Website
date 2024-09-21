@@ -20,10 +20,11 @@ p{
     font-weight: 600;
 
     &.regular{font-size: 24px;font-weight: 500;}
+    &.smallSubheading{font-size: 28px;}
     &.subheading{font-size: 32px;}
     &.heading{font-size: 60px;}
     &.title{font-size: 80px;}
-    &.skill{font-size: 24px;font-weight: 600;}
+    &.boldRegular{font-size: 24px;font-weight: 600;}
 }
 
 /* Code given to all flexItems */
@@ -36,8 +37,7 @@ p{
 .screen{
     height: 100%;
     width: 100vw;
-    min-height: 90vh;
-    padding-bottom: 10vh;
+    padding: 5vh 0vw;
 
     &#HomeScreen{
         .homeScreenBody{
@@ -275,7 +275,48 @@ p{
     }
 
     &#Experience{
-       
+        .experienceItems{
+            padding: 5vh 0vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 5vh;
+
+            .experienceItem{
+                border-radius: 40px;
+                box-shadow: 4px 4px 4px 4px rgb(58, 58, 58);
+                padding: 2vh 2vw;
+                display: flex;
+                justify-content: start;
+                align-items: start;
+                text-align-last: left;
+                width: 80vw;
+                height: 20vh;
+                background-color: rgb(212, 212, 212);
+                
+                .imageLocation{
+                    img{
+                        border-radius: 25px;
+                        cursor: pointer;
+                    }
+                }
+
+                .content{
+                    flex: 4 4;
+                    p{
+                        color:black;
+                        padding: 2px;
+                        &.role{font-style: italic;}
+                        &.date{}
+                    }
+                }
+            }
+        }
+    }
+
+    &#ContactMe{
+
     }
 
     &#Footer{
