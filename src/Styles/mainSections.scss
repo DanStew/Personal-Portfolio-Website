@@ -40,6 +40,8 @@ p{
     padding: 5vh 0vw;
 
     &#HomeScreen{
+        padding: 0px;
+
         .homeScreenBody{
             //Displaying the body over the animated background
             position: relative;
@@ -62,6 +64,69 @@ p{
                 width: 70%;
                 margin-top: 2vh;
                 margin-bottom: 2vh;
+            }
+
+            .HomeScreenLinks{
+                padding: 2vh;
+                display: flex;
+                width: 40%;
+                justify-content: center;
+                align-items: center;
+                gap: 5vw;
+
+                img{
+                    height: 10vh;
+                    width: 10vh;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    cursor: pointer;
+                    transition: transform 1s;
+
+                    &:hover{
+                        animation: rotateMotion 4s ease-in-out infinite;
+                    }
+                }
+
+                a{
+                    text-decoration: none;
+
+                    button{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 10px;
+                        padding: 10px;
+                        border-radius: 25px;
+                        border: none;
+                        cursor: pointer;
+                        p{color: black;}
+                        span{font-size: 40px;}
+                        transition: all 1s;
+
+                        &:hover{
+                            transform: translateY(-1vh);
+                            box-shadow: 2px 2px 2px 2px rgb(138, 138, 138);
+                        }
+                    }
+                }
+            }
+
+            .explore{
+                width: 80%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 4vh 0vw;
+                
+                button{
+                    width: 30vw;
+                    height: 10vh;
+                    border: none;
+                    border-radius: 25px;
+                    cursor: pointer;
+                    a{text-decoration: none;}
+                    p{color: black;}
+                }
             }
         }
     }
@@ -340,4 +405,12 @@ p{
 @keyframes moveUpContent {
     0% {transform: translateY(20px);}
     100%{transform: translateY(0px);}
+}
+
+//Code to rotate an item back and forth
+@keyframes rotateMotion {
+    0% {transform: rotate(0deg);}
+    25% {transform: rotate(30deg);}
+    75% {transform: rotate(-30deg);}
+    100% {transform: rotate(0deg);}
 }

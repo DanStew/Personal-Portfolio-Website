@@ -3,7 +3,7 @@ import linkedIn from "../Images/linkedInLogo.jpg"
 function AboutMe(){
     return(
         <div id="AboutMe" className="screen">
-            <p className="heading">About Me</p>
+            <p id="AboutMeTitle" className="heading">About Me</p>
             <div className="content">
                 <div className="photoArea flexItems">
                     <img src={linkedIn} alt="Photo of Me" />

@@ -2,6 +2,9 @@
 import githubLogo from "../Images/githubLogo.jpg"
 import linkedInLogo from "../Images/linkedInLogo.jpg"
 
+//Importing my CV to use
+import myCV from "../DanielStewartCV.pdf"
+
 function HomeScreen(){
     return(
         <div id="HomeScreen" className="screen">
@@ -24,13 +27,15 @@ function HomeScreen(){
                 <div className="HomeScreenInfo">
                     <p className="subheading">I'm a current CS Undergrad at the University of Leicester and am currently in my Second Year. I have a keen interest in Web Development, AI and Data Science.</p>
                 </div>
+                <p className="subheading">Check out my Socials : </p>
                 <div className="HomeScreenLinks">
-                    <p className="subheading">Check out my Socials : </p>
-                    <button><span class="material-symbols-outlined">file_open</span> Download My CV</button>
+                    <a href={myCV} target="_blank"><button><span class="material-symbols-outlined">file_open</span><p className="subheading">Download My CV</p></button></a>
                     <img onClick={() => window.open("https://github.com/")}src={githubLogo} alt="Open my Github" />
                     <img onClick={() => window.open("https://www.linkedin.com/in/daniel-stewart-025107257/")}src={linkedInLogo} alt="Open my Linked In" />
                 </div>
-                <button><a href="#AboutMe">Explore More about Me</a></button>
+                <div className="explore">
+                <a href="#ExploreButton"><button id="ExploreButton"><p className="subheading">Explore More about Me</p></button></a>
+                </div>
             </div>
         </div>
     )
