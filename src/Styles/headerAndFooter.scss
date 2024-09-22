@@ -156,4 +156,44 @@
         }
 
     }
+
+    //Styling the footer
+    &.Footer{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 99vw;
+        height: 8vh;
+        padding: 0vh 2vw 0vh 2vw;
+        background-color: black;
+        color: white;
+
+        .footerLinks{
+            width: 30vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2vw;
+
+            img{
+                height: 6vh;
+                width: 6vh;
+                border-radius: 50%;
+                object-fit: cover;
+                cursor: pointer;
+
+                &:hover{
+                    animation: rotateMotion 4s ease-in-out infinite;
+                }
+            }
+        }
+    }
+}
+
+//Code to rotate an item back and forth
+@keyframes rotateMotion {
+    0% {transform: rotate(0deg);}
+    25% {transform: rotate(30deg);}
+    75% {transform: rotate(-30deg);}
+    100% {transform: rotate(0deg);}
 }

@@ -373,7 +373,6 @@ p{
                         color:black;
                         padding: 2px;
                         &.role{font-style: italic;}
-                        &.date{}
                     }
                 }
             }
@@ -381,11 +380,92 @@ p{
     }
 
     &#ContactMe{
+        width: 90vw;
+        p{color: black;padding-bottom: 2vh;}
+        padding-left: 5vw;
 
-    }
+        .contactArea{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5vw;
+            margin-right: 5vw;
 
-    &#Footer{
-        
+            .contactLeft{
+                img{
+                    height: 12vh;
+                    width: 12vh;
+                    padding: 20px;
+                    border: none;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    cursor: pointer;
+
+                    &:hover{
+                        animation: rotateMotion 4s ease-in-out infinite;
+                    }
+                }
+            }
+
+            .contactRight{
+                flex: 2 2;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                background-color: rgb(196, 196, 196);
+                border-radius: 25px;
+                padding: 10px;
+
+                form{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    width: 90%;
+                    gap: 2vh;
+
+                    input{
+                        width: 80%;
+                        padding: 10px;
+                        border: none;
+                        border-bottom: 2px solid black;
+                        background-color: transparent;
+                        font-size: 28px;
+                        font-weight: 600;
+                    }
+
+                    textarea{
+                        width: 80%;
+                        font-size: 28px;
+                        padding: 10px;
+                    }
+
+                    ::placeholder{
+                        font-size: 28px;
+                        color:rgb(54, 53, 53);
+                        font-weight: 600;
+                    }
+                }
+
+                button{
+                    width: 60%;
+                    padding: 10px;
+                    font-size: 50px;
+                    font-weight: 600;
+                    border: none;
+                    border-radius: 40px;
+                    transition: background-color 1s;
+                    background-color: rgb(70, 70, 70);
+                    color: white;
+                    cursor: pointer;
+
+                    &:hover{
+                        background-color: rgb(40, 40, 40);
+                    }
+                }
+            }
+        }
     }
 }
 
