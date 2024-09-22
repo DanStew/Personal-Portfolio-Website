@@ -37,12 +37,7 @@ function Home(){
         //Implementing the loader item
         const loader = document.querySelector(".loader");
         //Hiding the loader
-        loader.classList.add("loader-hidden")
-        //Removing it entirely from your code
-        loader.addEventListener("transitionend", () => {
-            console.log("Transition ended")
-        })
-        
+        loader.classList.add("loader-hidden")        
         //Adding the scroll event listener
         window.addEventListener("scroll",handleScroll)
     },[])

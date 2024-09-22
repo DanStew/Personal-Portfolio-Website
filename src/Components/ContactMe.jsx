@@ -1,18 +1,54 @@
 //Importing the images in for socials
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import githubLogo from "../Images/githubLogo.jpg";
 import linkedInLogo from "../Images/linkedInLogo.jpg";
+import emailjs from '@emailjs/browser'
 
 function ContactMe() {
   //Usestate variables to stores the inputs
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [title, setTitle] = useState("");
   const [message, setMessage] = useState("");
+  
+  //Code to store success / error message
+  const [errorMsg,setErrorMsg] = useState("")
+
+  //Useeffect to initalise emailjs with my public key
+  useEffect(() => {
+    emailjs.init("iRAIRQra4UvUAAWb1")
+  },[])
 
   //Function to send me an email, using the form
   function sendEmail() {
-    window.open(
-      `mailto:danielstewarts2004@gmail.com?subject=${message}&body=${title}`
+    //Resetting the error message
+    setErrorMsg("")
+    //Validating any inputs
+    if (name == "" || email == "" || title == "" || message == ""){
+      setErrorMsg("One or more email inputs are empty...")
+      return
+    }
+
+    //Sending the email
+    emailjs.send("service_jp7hzwl","template_4ftmvv4",{
+      from_name: name,
+      email_id: email,
+      title: title,
+      message: message,
+    }).then(
+      (response) => {
+        //Noting success
+        setErrorMsg("Email Successfully Sent")
+        //Resetting values
+        setName("")
+        setEmail("")
+        setTitle("")
+        setMessage("")
+      },
+      (error) => {
+        console.log('FAILED...', error);
+        setErrorMsg("An error has occurred when sending the email")
+      },
     );
   }
 
@@ -30,20 +66,14 @@ function ContactMe() {
       </div>
       <div className="contactRight">
         <p className="subheading">Send an Email</p>
-        <form
-          action="http://postmail.invotes.com/send"
-          method="post"
-          id="email_form"
-        >
-          <input type="text" name="subject" placeholder="Subject" />
-          <textarea name="text" placeholder="Message"></textarea>
-          <input type="hidden" name="access_token" value="abc123" />
-
-          <input type="hidden" name="success_url" value="." />
-          <input type="hidden" name="error_url" value=".?err=1" />
-
-          <input id="submit_form" type="submit" value="Send" />
+        <form action="#">
+          <input onChange={(e) => setName(e.target.value)} value={name} type="text" placeholder="Enter your Name..."/>
+          <input onChange={(e) => setEmail(e.target.value)} value={email} type="email" placeholder="Enter your Email..."/>
+          <input onChange={(e) => setTitle(e.target.value)} value={title} type="text" placeholder="Enter the Email Title..."/>
+          <input onChange={(e) => setMessage(e.target.value)} value={message} type="text" placeholder="Enter your Message..."/>
+          <button onClick={() => sendEmail()} type="button">Send Email</button>
         </form>
+        {errorMsg != "" ? <p className="error boldRegular">{errorMsg}</p> : <div style={{display:"none"}}></div>}
       </div>
     </div>
   );
