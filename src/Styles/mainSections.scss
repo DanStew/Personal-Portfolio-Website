@@ -9,7 +9,7 @@ body{
     text-align: center;
     font-weight: 600;
     font-family: "Roboto", sans-serif;
-    background-color: rgb(152, 152, 152);
+    background: linear-gradient(90deg, rgb(0, 119, 255) 0%, rgb(14, 132, 168) 50%, rgb(153, 198, 207) 100%);
 }
 
 /* Making the default text styles for the page */
@@ -22,7 +22,7 @@ p{
     &.regular{font-size: 24px;font-weight: 500;}
     &.smallSubheading{font-size: 28px;}
     &.subheading{font-size: 32px;}
-    &.heading{font-size: 60px;}
+    &.heading{font-size: 68px;}
     &.title{font-size: 80px;}
     &.boldRegular{font-size: 24px;font-weight: 600;}
 }
@@ -49,7 +49,7 @@ p{
             left: 0;
             height: 90vh;
             z-index: 1;
-            padding: 50px;
+            padding-top: 20px;
             padding-left: 10vw;
             text-align: left;
             line-height: 1.5;
@@ -110,7 +110,7 @@ p{
 
                         &:hover{
                             transform: translateY(-1vh);
-                            box-shadow: 2px 2px 2px 2px rgb(138, 138, 138);
+                            box-shadow: 2px 2px 2px 2px rgb(168, 168, 168);
                         }
                     }
                 }
@@ -187,17 +187,19 @@ p{
                 .skill{
                     height: 18vh;
                     width: 18vh;
-                    background-color: rgb(75, 75, 75);
+                    background-color: rgb(215, 215, 215);
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     flex-direction: column;
                     gap: 5px;
-                    box-shadow: 4px 4px 4px 4px rgb(89, 89, 89);
+                    box-shadow: 4px 4px 4px 4px rgb(168, 168, 168);
                     transition: transform 2s;
+                    p{color:black;}
 
                     img{
                         height: 10vh;
+                        max-width: 9vw;
                         border-radius: 50%;
                         object-fit: cover;
                     }
@@ -235,7 +237,7 @@ p{
             width: 40vw;
             position: relative;
             overflow-y: hidden;
-            box-shadow: 4px 4px 4px 4px rgb(58, 58, 58);
+            box-shadow: 4px 4px 4px 4px rgb(168, 168, 168);
 
             img{
                 height: 30vh;
@@ -255,7 +257,8 @@ p{
                 left: 0;
                 opacity: 0;
                 z-index: 2;
-                background-color: black;
+                background-color: rgb(168, 168, 168);
+                p{color:black;}
                 transition: opacity 1s;
             }
             
@@ -298,7 +301,7 @@ p{
             width: 25vw;
             height: 20vh;
             background-color: rgb(212, 212, 212);
-            box-shadow: 4px 4px 4px 4px rgb(58, 58, 58);
+            box-shadow: 4px 4px 4px 4px rgb(168, 168, 168);
             text-align-last: left;
             padding: 10px;
             transition: transform 2s;
@@ -339,7 +342,7 @@ p{
             padding: 2vh 10vw 2vh 10vw;
             border-radius: 20px;
             border: none;
-            box-shadow: 4px 4px 4px 4px rgb(58, 58, 58);
+            box-shadow: 4px 4px 4px 4px rgb(168, 168, 168);
             cursor: pointer;
             p{color: black;}
         }
@@ -356,7 +359,7 @@ p{
 
             .experienceItem{
                 border-radius: 40px;
-                box-shadow: 4px 4px 4px 4px rgb(58, 58, 58);
+                box-shadow: 4px 4px 4px 4px rgb(168, 168, 168);
                 padding: 2vh 2vw;
                 display: flex;
                 justify-content: start;

@@ -68,7 +68,7 @@ function ContactMe() {
           </div>
         </div>
         <div className="contactRight">
-          <p className="heading">Send an Email</p>
+          <p className="heading">Send me an Email</p>
           <form action="#">
             <input
               onChange={(e) => setName(e.target.value)}
