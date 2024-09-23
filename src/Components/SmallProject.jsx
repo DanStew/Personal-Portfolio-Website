@@ -1,6 +1,6 @@
 import githubLogo from "../Images/githubLogo.jpg"
 
-function SmallProject({title,description,skills,githubLink}){
+function SmallProject({title,description,skills,githubLink,finished}){
 
     return(
         <div className="smallProject">

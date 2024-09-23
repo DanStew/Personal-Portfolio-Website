@@ -1,9 +1,13 @@
 import MainProject from "./MainProject"
 import SmallProject from "./SmallProject"
+import { useState } from "react"
 
 //Importing the images for the main projects
-import LinkedInLogo from "../Images/linkedInLogo.jpg"
-import { useState } from "react"
+import goalTrackerApp from "../Images/goalTrackerApp.png"
+import FMPlayerAnalysis from "../Images/FMPlayerAnalysis.png"
+import RubixCubeSolver from "../Images/RubixCubeSolver.png"
+import TwitterClone from "../Images/TwitterClone.png"
+
 
 function Projects(){
 
@@ -16,51 +20,59 @@ function Projects(){
             <div className="mainProjects">
                 <div className="mainProjectRow">
                     <MainProject 
-                        image={LinkedInLogo}
+                        image={goalTrackerApp}
                         title="Test Project 1"
                         description="This is a test"
                         skills={["Skill 1", "Skill 2","Skill 3"]}
                         liveLink="google.com"
                         githubLink="https://github.com/"
+                        finished={false}
                     />
                     <MainProject 
-                        image={LinkedInLogo}
+                        image={FMPlayerAnalysis}
                         title="Test Project 2"
                         description="This is a test"
                         skills={["Skill 1", "Skill 2","Skill 3"]}
                         liveLink=""
                         githubLink="https://github.com/"
+                        finished={true}
                     />
                 </div>
                 <div className="mainProjectRow">
                     <MainProject 
-                        image={LinkedInLogo}
+                        image={RubixCubeSolver}
                         title="Test Project 3"
                         description="This is a test"
                         skills={["Skill 1", "Skill 2","Skill 3"]}
                         liveLink="google.com"
                         githubLink="https://github.com/"
+                        finished={true}
                     />
                     <MainProject 
-                        image={LinkedInLogo}
+                        image={TwitterClone}
                         title="Test Project 4"
                         description="This is a test"
                         skills={["Skill 1", "Skill 2","Skill 3"]}
                         liveLink="google.com"
                         githubLink="https://github.com/"
+                        finished={true}
                     />
                 </div>
-                <div className="mainProjectRow">
-                    <MainProject 
-                        image={LinkedInLogo}
-                        title="Test Project 5"
-                        description="This is a test"
-                        skills={["Skill 1", "Skill 2","Skill 3"]}
-                        liveLink="google.com"
-                        githubLink="https://github.com/"
-                    />
-                    <div className="emptyMainProject"></div>
-                </div>
+                {/*
+                    Example of how you can add a row, and include empty main project items
+                    <div className="mainProjectRow">
+                        <MainProject 
+                            image={LinkedInLogo}
+                            title="Test Project 5"
+                            description="This is a test"
+                            skills={["Skill 1", "Skill 2","Skill 3"]}
+                            liveLink="google.com"
+                            githubLink="https://github.com/"
+                            finished={true}
+                        />
+                        <div className="emptyMainProject"></div>
+                    </div>
+                */}
             </div>
             <div className="smallProjects">
                 <div className="smallProjectRow">
@@ -69,18 +81,21 @@ function Projects(){
                         description="This is a description"
                         skills={["Skill 1", "Skill 2", "Skill 3"]}
                         githubLink="https://github.com/"
+                        finished={true}
                     />
                     <SmallProject 
                         title="Small Project 2"
                         description="This is a description"
                         skills={["Skill 1", "Skill 2", "Skill 3"]}
                         githubLink="https://github.com/"
+                        finished={true}
                     />
                     <SmallProject 
                         title="Small Project 3"
                         description="This is a description"
                         skills={["Skill 1", "Skill 2", "Skill 3"]}
                         githubLink="https://github.com/"
+                        finished={true}
                     />
                 </div>
                 <div className="smallProjectRow">
@@ -89,18 +104,21 @@ function Projects(){
                         description="This is a description"
                         skills={["Skill 1", "Skill 2", "Skill 3"]}
                         githubLink="https://github.com/"
+                        finished={true}
                     />
                     <SmallProject 
                         title="Small Project 5"
                         description="This is a description"
                         skills={["Skill 1", "Skill 2", "Skill 3"]}
                         githubLink="https://github.com/"
+                        finished={true}
                     />
                     <SmallProject 
                         title="Small Project 6"
                         description="This is a description"
                         skills={["Skill 1", "Skill 2", "Skill 3"]}
                         githubLink="https://github.com/"
+                        finished={true}
                     />
                 </div>
                 {/* Code to show the show more / less projects, depending on users actions  */}

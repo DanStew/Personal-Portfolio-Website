@@ -63,8 +63,8 @@ function ContactMe() {
           <p className="subheading">danielstewarts2004@gmail.com</p>
           <p className="heading">Socials : </p>
           <div className="socialsLine">
-            <img src={linkedInLogo} onClick={() => window.open("https://github.com/")} alt="Linked In Logo and Link" />
-            <img src={githubLogo} onClick={() => window.open("https://www.linkedin.com/in/daniel-stewart-025107257/")} alt="Github Logo and Link" />
+            <img src={githubLogo} onClick={() => window.open("https://github.com/DanStew")} alt="Linked In Logo and Link" />
+            <img src={linkedInLogo} onClick={() => window.open("https://www.linkedin.com/in/daniel-stewart-025107257/")} alt="Github Logo and Link" />
           </div>
         </div>
         <div className="contactRight">
