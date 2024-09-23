@@ -5,7 +5,7 @@ function SmallProject({title,description,skills,githubLink,finished}){
     return(
         <div className="smallProject">
             <div className="headerLine">
-                <p className="subheading">{title}</p>
+                <p className="boldRegular">{title}</p>
                 <img onClick={() => window.open(githubLink)}src={githubLogo} alt="Link to Github" />
             </div>
             <div className="content">

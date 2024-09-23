@@ -3,22 +3,6 @@ function MainProject({image,title,description,skills,liveLink,githubLink,finishe
         <div className="mainProject">
             <img src={image} alt={title + "project image"} />
             <div className="projectContent">
-                {!finished? 
-                    <div className="unfinished">
-                        <div className="background">
-                            <div className="yellow unfinishedColor"></div>
-                            <div className="black unfinishedColor"></div>
-                            <div className="yellow unfinishedColor"></div>
-                            <div className="black unfinishedColor"></div>
-                            <div className="yellow unfinishedColor"></div>
-                            <div className="black unfinishedColor"></div>
-                        </div>
-                        <div className="unfinishedWriting">
-                            <p className="boldRegular">Not Finished</p>
-                        </div>
-                    </div> 
-                    : <div style={{display:"none"}}></div>
-                }
                 <p className="subheading">{title}</p>
                 <p className="regular">{description}</p>
                 {/* Displaying the skills onto the project */}

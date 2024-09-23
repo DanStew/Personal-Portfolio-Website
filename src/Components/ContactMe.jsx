@@ -68,7 +68,7 @@ function ContactMe() {
           </div>
         </div>
         <div className="contactRight">
-          <p className="heading">Send me an Email</p>
+          <p className="heading">Send me a Message</p>
           <form action="#">
             <input
               onChange={(e) => setName(e.target.value)}
@@ -86,10 +86,10 @@ function ContactMe() {
               onChange={(e) => setTitle(e.target.value)}
               value={title}
               type="text"
-              placeholder="Enter the Email Title..."
+              placeholder="Enter the Title..."
             />
             <textarea rows="4" onChange={(e) => setMessage(e.target.value)} value={message} placeholder="Enter your Message..."></textarea>
-            <button onClick={() => sendEmail()} type="button">Send Email</button>
+            <button onClick={() => sendEmail()} type="button">Send Message</button>
           </form>
           {errorMsg != "" ? (
             <p className="error boldRegular">{errorMsg}</p>

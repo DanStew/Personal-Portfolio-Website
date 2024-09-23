@@ -233,14 +233,14 @@ p{
         .smallProjectRow{gap:5vw;}
 
         .mainProject{
-            height: 30vh;
+            height: 35vh;
             width: 40vw;
             position: relative;
             overflow-y: hidden;
             box-shadow: 4px 4px 4px 4px rgb(168, 168, 168);
 
             img{
-                height: 30vh;
+                height: 35vh;
                 width: 40vw;
                 position: absolute;
                 top: 0;
@@ -250,7 +250,7 @@ p{
             }
 
             .projectContent{
-                height: 25vh;
+                height: 30vh;
                 width: 40vw;
                 position: absolute;
                 bottom: 0;
@@ -258,7 +258,16 @@ p{
                 opacity: 0;
                 z-index: 2;
                 background-color: rgb(168, 168, 168);
-                p{color:black;}
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 6px;
+                flex-direction: column;
+
+                p{
+                    padding: 0px 10px;
+                    color:black;
+                }
                 transition: opacity 1s;
             }
             
@@ -278,7 +287,7 @@ p{
 
                 button{
                     padding: 10px;
-                    width: 30%;
+                    width: 100%;
                     border: none;
                     border-radius: 25px;
                     cursor: pointer;
@@ -290,7 +299,7 @@ p{
                     font-weight: 600;
 
                     &:hover{
-                        background-color: rgb(182, 182, 182);
+                        background-color: rgb(226, 226, 226);
                     }
                 }
             }
@@ -302,7 +311,7 @@ p{
             height: 20vh;
             background-color: rgb(212, 212, 212);
             box-shadow: 4px 4px 4px 4px rgb(168, 168, 168);
-            text-align-last: left;
+            text-align-last: center;
             padding: 10px;
             transition: transform 2s;
 
