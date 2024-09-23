@@ -60,6 +60,11 @@ p{
                 color: yellow;
             }
 
+            .typingAnimation{
+                padding-left: 20px;
+                font-style: italic;
+            }
+
             .HomeScreenInfo{
                 width: 70%;
                 margin-top: 2vh;
@@ -131,8 +136,8 @@ p{
         }
     }
 
-    &#AboutMe{
-        margin-top: 20px;
+    &#aboutMe{
+        margin-top: 6vh;
 
         .content{
             display: flex;
@@ -157,12 +162,13 @@ p{
 
     }
 
-    &#Skills{
+    &#skills{
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         gap: 5vh;
+        margin-top: 2vh;
         margin-bottom: 3vh;
 
         .skillsArea{
@@ -209,7 +215,7 @@ p{
         }
     }
 
-    &#Projects{
+    &#projects{
         .mainProjectRow, .smallProjectRow{
             padding-top: 5vh;
             padding-bottom: 5vh;
@@ -339,7 +345,7 @@ p{
         }
     }
 
-    &#Experience{
+    &#experience{
         .experienceItems{
             padding: 5vh 0vw;
             display: flex;
@@ -379,7 +385,7 @@ p{
         }
     }
 
-    &#ContactMe{
+    &#contactMe{
         width: 90vw;
         p{color: black;padding-bottom: 2vh;}
         padding-left: 5vw;

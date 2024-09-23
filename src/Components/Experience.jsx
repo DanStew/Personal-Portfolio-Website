@@ -5,7 +5,7 @@ import linkedInLogo from "../Images/linkedInLogo.jpg"
 
 function Experience(){
     return(
-        <div id="Experience" className="screen">
+        <div id="experience" className="screen">
             <p className="heading">Experience</p>
             <div className="experienceItems flexItems">
                 <ExperienceItem 
@@ -17,6 +17,7 @@ function Experience(){
                     companyLink="https://www.twopointstudios.com/"   
                 />
             </div>
+            <div id="Contact"></div>
         </div>
     )
 }

@@ -2,6 +2,8 @@
 import githubLogo from "../Images/githubLogo.jpg"
 import linkedInLogo from "../Images/linkedInLogo.jpg"
 
+import {ReactTyped} from "react-typed";
+
 //Importing my CV to use
 import myCV from "../DanielStewartCV.pdf"
 
@@ -23,6 +25,17 @@ function HomeScreen(){
             <div className="homeScreenBody flexItems">
                 <p className="heading">Hello, My Name is </p>
                 <p className="nameTitle title">Daniel Stewart</p>
+                <p className="heading typingAnimation">
+                    I'm a{" "}
+                    <ReactTyped
+                        strings={["Web Developer", "Coder", "Student"]}
+                        typeSpeed={100}
+                        loop
+                        backSpeed={80}
+                        cursorChar=" />"
+                        showCursor={true}
+                    />
+                </p>
                 {/* Typing animation here */}
                 <div className="HomeScreenInfo">
                     <p className="subheading">I'm a current CS Undergrad at the University of Leicester and am currently in my Second Year. I have a keen interest in Web Development, AI and Data Science.</p>
@@ -37,6 +50,7 @@ function HomeScreen(){
                 <a href="#ExploreButton"><button id="ExploreButton"><p className="subheading">Explore More about Me</p></button></a>
                 </div>
             </div>
+            <div id="AboutMe"></div>
         </div>
     )
 }

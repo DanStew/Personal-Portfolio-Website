@@ -164,12 +164,13 @@
         justify-content: space-between;
         width: 99vw;
         height: 8vh;
-        padding: 0vh 2vw 0vh 2vw;
         background-color: black;
         color: white;
 
+        .footerText{width:100%;}
+
         .footerLinks{
-            width: 30vw;
+            width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -186,6 +187,8 @@
                     animation: rotateMotion 4s ease-in-out infinite;
                 }
             }
+
+            p{color:black;}
         }
     }
 }

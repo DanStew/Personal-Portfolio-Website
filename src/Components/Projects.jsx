@@ -11,7 +11,7 @@ function Projects(){
     const [showMore, setShowMore] = useState(false)
 
     return(
-        <div id="Projects" className="screen">
+        <div id="projects" className="screen">
             <p className="heading">My Projects</p>
             <div className="mainProjects">
                 <div className="mainProjectRow">
@@ -104,7 +104,7 @@ function Projects(){
                     />
                 </div>
                 {/* Code to show the show more / less projects, depending on users actions  */}
-                {showMore? <button onClick={() => setShowMore(false)} className="showMoreLess"><p className="heading">Show Less</p></button> : <button onClick={() => setShowMore(true)} className="showMoreLess"><p className="heading">Show More</p></button>}
+                {showMore? <button id="ShowMoreLessButton" onClick={() => setShowMore(false)} className="showMoreLess"><p className="heading">Show Less</p></button> : <button id="ShowMoreLessButton" onClick={() => setShowMore(true)} className="showMoreLess"><p className="heading">Show More</p></button>}
                 {/* Code use to display the additional projects */}
                 {showMore? 
                     <div className="showMoreProjects">
@@ -127,6 +127,7 @@ function Projects(){
                     : <div style={{display:"none"}}></div>
                 }
             </div>
+            <div id="Experience"></div>
         </div>
     )
 }

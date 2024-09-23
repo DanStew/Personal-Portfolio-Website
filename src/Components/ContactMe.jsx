@@ -55,7 +55,7 @@ function ContactMe() {
   }
 
   return (
-    <div id="ContactMe" className="screen">
+    <div id="contactMe" className="screen">
       <p className="heading flexItems">Contact Me</p>
       <div className="contactArea flexItems">
         <div className="contactLeft flexItems">

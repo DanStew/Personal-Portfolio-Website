@@ -5,7 +5,7 @@ import LinkedInLogo from "../Images/linkedInLogo.jpg"
 
 function Skills(){
     return(
-        <div id="Skills" className="screen">
+        <div id="skills" className="screen">
             <p className="heading">My Skills</p>
             <div className="skillsArea">
                 <div className="skillsRow">
@@ -29,7 +29,7 @@ function Skills(){
                     <Skill img={LinkedInLogo} text={"Linked In"}/> 
                     <Skill img={LinkedInLogo} text={"Linked In"}/> 
                 </div>
-                <div className="skillsRow">
+                <div id="LastSkillRow" className="skillsRow">
                     <Skill img={LinkedInLogo} text={"Linked In"}/>
                     <Skill img={LinkedInLogo} text={"Linked In"}/>
                     <Skill img={LinkedInLogo} text={"Linked In"}/> 
@@ -38,6 +38,7 @@ function Skills(){
                     <div className="empty"></div>
                 </div>
             </div>
+            <div id="Projects"></div>
         </div>
     )
 }
