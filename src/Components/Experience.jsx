@@ -17,7 +17,7 @@ function Experience(){
                     companyLink="https://www.twopointstudios.com/"   
                 />
             </div>
-            <div id="Contact"></div>
+            <div id="ContactMe"></div>
         </div>
     )
 }

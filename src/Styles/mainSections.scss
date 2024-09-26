@@ -25,15 +25,9 @@ p{
     //Used when black text is needed instead of white
     &.black{color:black;}
     //Appending italics, if needed
-    &.italic{font-style: italic;}
-
-    //Classes to determine the font size and weight of fonts
-    &.regular{font-size: 24px;font-weight: 500;}
-    &.smallSubheading{font-size: 28px;}
-    &.subheading{font-size: 32px;}
-    &.heading{font-size: 68px;}
-    &.title{font-size: 80px;}
-    &.boldRegular{font-size: 24px;}
+    &.italic{font-style: italic;};
+    //Font size for the top header, as it never changes
+    &.topHeader{font-size: 32px;}
 }
 
 //Styling images on the website
@@ -93,11 +87,10 @@ img{
 button{
     border: none;
     border-radius: 25px;
+    font-weight: 600;
     cursor: pointer;
-    padding: 10px;
 
     &.homeScreenLinksButton{
-        span{font-size: 40px;}
         transition: all 1s;
 
         &:hover{
@@ -118,7 +111,6 @@ button{
         transition: background-color 1s;
         opacity: 1;
         color: black;
-        font-size: 24px;
 
         &:hover{
             background-color: rgb(226, 226, 226);
@@ -127,7 +119,6 @@ button{
 
     &.contactButton{
         width: 60%;
-        font-size: 50px;
         transition: background-color 1s;
         background-color: rgb(70, 70, 70);
         color: white;
@@ -135,6 +126,155 @@ button{
         &:hover{
             background-color: rgb(40, 40, 40);
         }
+    }
+}
+
+//Implemented the needed media queries
+@media screen and (min-width : 1360px) {
+    //Styling the font styles
+    p{
+        //Classes to determine the font size and weight of fonts
+        &.regular{font-size: 22px;font-weight: 500;}
+        &.boldRegular{font-size: 22px;}
+        &.smallSubheading{font-size: 28px;}
+        &.subheading{font-size: 32px;}
+        &.heading{font-size: 68px;}
+        &.title{font-size: 80px;}
+    }
+
+    //Styling the buttons font styles
+    button{
+        padding: 10px;
+
+        &.homeScreenLinksButton{
+            span{font-size: 40px;}
+        }
+
+        &.mainProjectButton{
+            font-size: 24px;
+        }
+
+        &.contactButton{
+            font-size: 50px;
+        }
+    }
+
+    //Styling the inputs font sizes
+    form{
+        input{font-size: 28px;}
+        textarea{font-size: 28px;}
+        &::placeholder{font-size: 28px;}
+    }
+}
+
+@media screen and (min-width : 1080px) and (max-width : 1360px) {
+    //Styling the font styles
+    p{
+        //Classes to determine the font size and weight of fonts
+        &.regular{font-size: 20px;font-weight: 500;}
+        &.boldRegular{font-size: 20px;}
+        &.smallSubheading{font-size: 24px;}
+        &.subheading{font-size: 26px;}
+        &.heading{font-size: 56px;}
+        &.title{font-size: 68px;}
+    }
+
+    //Styling the buttons font styles
+    button{
+        padding: 10px;
+
+        &.homeScreenLinksButton{
+            span{font-size: 32px;}
+        }
+
+        &.mainProjectButton{
+            font-size: 20px;
+        }
+
+        &.contactButton{
+            font-size: 42px;
+        }
+    }
+
+    //Styling the inputs font sizes
+    form{
+        input{font-size: 26px;}
+        textarea{font-size: 26px;}
+        &::placeholder{font-size: 26px;}
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width : 1080px) {
+    //Styling the font styles
+    p{
+        //Classes to determine the font size and weight of fonts
+        &.regular{font-size: 16px;font-weight: 500;}
+        &.smallSubheading{font-size: 20px;}
+        &.subheading{font-size: 22px;}
+        &.heading{font-size: 40px;}
+        &.title{font-size: 50px;}
+        &.boldRegular{font-size: 16px;}
+    }
+
+    //Styling the buttons font styles
+    button{
+        padding: 5px;
+
+        &.homeScreenLinksButton{
+            span{font-size: 28px;}
+        }
+
+        &.mainProjectButton{
+            font-size: 16px;
+        }
+
+        &.contactButton{
+            font-size: 36px;
+        }
+    }
+
+    //Styling the inputs font sizes
+    form{
+        input{font-size: 20px;}
+        textarea{font-size: 20px;}
+        &::placeholder{font-size: 20px;}
+    }
+}
+
+@media screen and (min-width:560px) and (max-width : 800px) {
+    //Styling the font styles
+    p{
+        //Classes to determine the font size and weight of fonts
+        &.regular{font-size: 14px;font-weight: 500;}
+        &.boldRegular{font-size: 14px;}
+        &.smallSubheading{font-size: 18px;}
+        &.subheading{font-size: 20px;}
+        &.heading{font-size: 32px;}
+        &.title{font-size: 44px;}
+    }
+
+    //Styling the buttons font styles
+    button{
+        padding: 5px;
+
+        &.homeScreenLinksButton{
+            span{font-size: 22px;}
+        }
+
+        &.mainProjectButton{
+            font-size: 14px;
+        }
+
+        &.contactButton{
+            font-size: 30px;
+        }
+    }
+
+    //Styling the inputs font sizes
+    form{
+        input{font-size: 18px;}
+        textarea{font-size: 14px;}
+        &::placeholder{font-size: 18px;}
     }
 }
 
@@ -172,6 +312,7 @@ button{
 
     &#HomeScreen{
         padding: 0px;
+        z-index: 5;
 
         .homeScreenBody{
             //Displaying the body over the animated background
@@ -220,6 +361,7 @@ button{
 
     &#aboutMe{
         margin-top: 6vh;
+        z-index: 1;
 
         .content{
             padding: 0vh 8vw;
@@ -276,6 +418,7 @@ button{
             position: relative;
             overflow-y: hidden;
             box-shadow: 4px 4px 4px 4px $lightShadow;
+            overflow-x: hidden;
 
             img{
                 position: absolute;
@@ -284,6 +427,7 @@ button{
             }
 
             .projectContent{
+                position: relative;
                 height: 30vh;
                 width: 40vw;
                 position: absolute;
@@ -398,18 +542,16 @@ button{
                         border: none;
                         border-bottom: 2px solid black;
                         background-color: transparent;
-                        font-size: 28px;
                         font-weight: 600;
                     }
 
                     textarea{
                         width: 80%;
-                        font-size: 28px;
                         padding: 10px;
+                        resize: none;
                     }
 
                     ::placeholder{
-                        font-size: 28px;
                         color:rgb(54, 53, 53);
                         font-weight: 600;
                     }

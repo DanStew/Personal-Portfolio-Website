@@ -31,7 +31,7 @@ function Header({showMenu,setShowMenu}){
             {/* Banner used when screen is wide */}
             <div className="horizontalBanner flexItems">
                 <div className="title flexItems">
-                    <p className="subheading">Daniel Stewart</p>
+                    <p className="topHeader">Daniel Stewart</p>
                 </div>
                 <div className="tabs flexItems">
                     {/* Just added the onclicks, they don't fully work right now */}
@@ -46,7 +46,7 @@ function Header({showMenu,setShowMenu}){
             {/* Banner used when screen is small */}
             <div className="verticalBanner flexItems">
                 <div className="title flexItems">
-                    <p className="subheading">Daniel Stewart</p>
+                    <p className="topHeader">Daniel Stewart</p>
                 </div>
                 {/* Making the settings icon */}
                 <span onClick={() => setShowMenu(!showMenu)} className="material-symbols-outlined flexItems">menu</span>

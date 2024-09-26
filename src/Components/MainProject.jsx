@@ -1,4 +1,4 @@
-function MainProject({image,title,description,skills,liveLink,githubLink,finished}){
+function MainProject({image,title,description,skills,liveLink,githubLink,documentation}){
     return(
         <div className="mainProject">
             <img className="mainProjectImg" src={image} alt={title + "project image"} />
@@ -20,6 +20,7 @@ function MainProject({image,title,description,skills,liveLink,githubLink,finishe
                 <div className="buttonArea flexDisplay smallWidthGap">
                     {liveLink != "" ? <button className="mainProjectButton" onClick={() => window.open(liveLink)}>Live</button> : <div display={{display:"none"}}></div>}
                     <button className="mainProjectButton" onClick={() => window.open(githubLink)}>Github</button>
+                    {documentation != "" ? <button className="mainProjectButton" onClick={() => window.open(documentation)}>Documentation</button> : <div display={{display:"none"}}></div>} 
                 </div>
             </div>
         </div>

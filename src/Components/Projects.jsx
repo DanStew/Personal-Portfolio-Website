@@ -26,7 +26,7 @@ function Projects(){
                         skills={["React", "Firebase","SASS"]}
                         liveLink="https://goaltrackerapp.com/"
                         githubLink="https://github.com/DanStew/Goal-Tracker---The-Life-Goal-Website"
-                        finished={true}
+                        documentation="https://docs.google.com/document/d/1JcuXsHRb3mEEXcaSNcUsjgkKkjOe0Z5tdkFLGm_A_W4/edit?usp=sharing"
                     />
                     <MainProject 
                         image={FMPlayerAnalysis}
@@ -35,7 +35,7 @@ function Projects(){
                         skills={["Python", "PySide","Qt","QML"]}
                         liveLink="https://fm-player-analysis.firebaseapp.com/"
                         githubLink="https://github.com/DanStew/FM-Player-Analysis-Website"
-                        finished={true}
+                        documentation="https://docs.google.com/document/d/17KBypGlObteZeqYlGL5SN-GoMKiJxb37GyGyppDafEo/edit?usp=sharing"
                     />
                 </div>
                 <div className="mainProjectRow flexDisplay noGap">
@@ -46,7 +46,7 @@ function Projects(){
                         skills={["HTML", "Javascript","CSS"]}
                         liveLink=""
                         githubLink="https://github.com/DanStew/RubixCubeSolver"
-                        finished={false}
+                        documentation=""
                     />
                     <MainProject 
                         image={TwitterClone}
@@ -55,6 +55,7 @@ function Projects(){
                         skills={["React", "Firebase","SASS"]}
                         liveLink=""
                         githubLink="https://github.com/DanStew/TwitterCloneProject"
+                        documentation=""
                         finished={false}
                     />
                 </div>
@@ -68,7 +69,7 @@ function Projects(){
                             skills={["Skill 1", "Skill 2","Skill 3"]}
                             liveLink="google.com"
                             githubLink="https://github.com/"
-                            finished={true}
+                            documentation=""
                         />
                         <div className="emptyMainProject"></div>
                     </div>
