@@ -56,20 +56,20 @@ function ContactMe() {
 
   return (
     <div id="contactMe" className="screen">
-      <p className="heading flexItems">Contact Me</p>
-      <div className="contactArea flexItems">
+      <p className="heading black flexItems">Contact Me</p>
+      <div className="contactArea flexDisplay widthGap flexItems">
         <div className="contactLeft flexItems">
-          <p className="heading">Email : </p>
-          <p className="subheading">danielstewarts2004@gmail.com</p>
-          <p className="heading">Socials : </p>
-          <div className="socialsLine">
-            <img src={githubLogo} onClick={() => window.open("https://github.com/DanStew")} alt="Linked In Logo and Link" />
-            <img src={linkedInLogo} onClick={() => window.open("https://www.linkedin.com/in/daniel-stewart-025107257/")} alt="Github Logo and Link" />
+          <p className="heading black">Email : </p>
+          <p className="subheading black">danielstewarts2004@gmail.com</p>
+          <p className="heading black">Socials : </p>
+          <div className="socialsLine flexDisplay gap">
+            <img className="circleImg contactImg rotating" src={githubLogo} onClick={() => window.open("https://github.com/DanStew")} alt="Linked In Logo and Link" />
+            <img className="circleImg contactImg rotating" src={linkedInLogo} onClick={() => window.open("https://www.linkedin.com/in/daniel-stewart-025107257/")} alt="Github Logo and Link" />
           </div>
         </div>
-        <div className="contactRight">
-          <p className="heading">Send me a Message</p>
-          <form action="#">
+        <div className="contactRight flexDisplay column noGap">
+          <p className="heading black">Send me a Message</p>
+          <form className="flexDisplay column smallHeightGap" action="#">
             <input
               onChange={(e) => setName(e.target.value)}
               value={name}

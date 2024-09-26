@@ -24,8 +24,8 @@ function HomeScreen(){
             </div>
             <div className="homeScreenBody flexItems">
                 <p className="heading">Hello, My Name is </p>
-                <p className="nameTitle title">Daniel Stewart</p>
-                <p className="heading typingAnimation">
+                <p className="nameTitle italic title">Daniel Stewart</p>
+                <p className="heading typingAnimation italic">
                     I'm a{" "}
                     <ReactTyped
                         strings={["Web Developer", "Coder", "Student"]}
@@ -41,13 +41,13 @@ function HomeScreen(){
                     <p className="subheading">I'm a current CS Undergrad at the University of Leicester and am currently in my Second Year. I have a keen interest in Web Development, AI and Data Science.</p>
                 </div>
                 <p className="subheading">Check out my Socials : </p>
-                <div className="HomeScreenLinks">
-                    <a href={myCV} target="_blank"><button><span className="material-symbols-outlined">file_open</span><p className="subheading">Download My CV</p></button></a>
-                    <img onClick={() => window.open("https://github.com/DanStew")}src={githubLogo} alt="Open my Github" />
-                    <img onClick={() => window.open("https://www.linkedin.com/in/daniel-stewart-025107257/")}src={linkedInLogo} alt="Open my Linked In" />
+                <div className="HomeScreenLinks flexDisplay widthGap">
+                    <a href={myCV} target="_blank"><button className="flexDisplay smallGap"><span className="material-symbols-outlined">file_open</span><p className="subheading black">Download My CV</p></button></a>
+                    <img className="circleImg homeScreenImg rotating" onClick={() => window.open("https://github.com/DanStew")} src={githubLogo} alt="Open my Github" />
+                    <img className="circleImg homeScreenImg rotating" onClick={() => window.open("https://www.linkedin.com/in/daniel-stewart-025107257/")} src={linkedInLogo} alt="Open my Linked In" />
                 </div>
-                <div className="explore">
-                <a href="#ExploreButton"><button id="ExploreButton"><p className="subheading">Explore More about Me</p></button></a>
+                <div className="explore flexDisplay noGap">
+                <a href="#ExploreButton"><button id="ExploreButton"><p className="subheading black">Explore More about Me</p></button></a>
                 </div>
             </div>
             <div id="AboutMe"></div>

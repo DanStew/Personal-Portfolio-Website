@@ -18,7 +18,7 @@ function Projects(){
         <div id="projects" className="screen">
             <p className="heading">My Projects</p>
             <div className="mainProjects">
-                <div className="mainProjectRow">
+                <div className="mainProjectRow flexDisplay noGap">
                     <MainProject 
                         image={goalTrackerApp}
                         title="Goal Tracker App"
@@ -38,7 +38,7 @@ function Projects(){
                         finished={true}
                     />
                 </div>
-                <div className="mainProjectRow">
+                <div className="mainProjectRow flexDisplay noGap">
                     <MainProject 
                         image={RubixCubeSolver}
                         title="Rubix Cube Solver"
@@ -60,7 +60,7 @@ function Projects(){
                 </div>
                 {/*
                     Example of how you can add a row, and include empty main project items
-                    <div className="mainProjectRow">
+                    <div className="mainProjectRow flexDisplay noGap">
                         <MainProject 
                             image={LinkedInLogo}
                             title="Test Project 5"
@@ -75,7 +75,7 @@ function Projects(){
                 */}
             </div>
             <div className="smallProjects">
-                <div className="smallProjectRow">
+                <div className="smallProjectRow flexDisplay noGap">
                     <SmallProject 
                         title="Personal Portfolio Website"
                         description="Website made to exspress the projects I have made, and more about me."
@@ -98,7 +98,7 @@ function Projects(){
                         finished={true}
                     />
                 </div>
-                <div className="smallProjectRow">
+                <div className="smallProjectRow flexDisplay noGap">
                     <SmallProject 
                         title="JavaScript Face Detection App"
                         description="Simple Javascript project that uses a camera on a webpage and detects faces and exspressions."
@@ -122,11 +122,11 @@ function Projects(){
                     />
                 </div>
                 {/* Code to show the show more / less projects, depending on users actions  */}
-                {showMore? <button id="ShowMoreLessButton" onClick={() => setShowMore(false)} className="showMoreLess"><p className="heading">Show Less</p></button> : <button id="ShowMoreLessButton" onClick={() => setShowMore(true)} className="showMoreLess"><p className="heading">Show More</p></button>}
+                {showMore? <button id="ShowMoreLessButton" onClick={() => setShowMore(false)} className="showMoreLess"><p className="heading black">Show Less</p></button> : <button id="ShowMoreLessButton" onClick={() => setShowMore(true)} className="showMoreLess"><p className="heading black">Show More</p></button>}
                 {/* Code use to display the additional projects */}
                 {showMore? 
                     <div className="showMoreProjects">
-                        <div className="smallProjectRow">
+                        <div className="smallProjectRow flexDisplay noGap">
                             <SmallProject 
                                 title="League Table and Knockout Fixture Generator"
                                 description="Website that allows you to generate a football league table or knockout tournament"

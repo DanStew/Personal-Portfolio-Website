@@ -1,3 +1,7 @@
+//Color Variables
+$lightShadow : rgb(168,168,168);
+$lightBackground : rgb(212,212,212);
+
 html{
     scroll-behavior: smooth;
 }
@@ -18,13 +22,96 @@ p{
     padding: 0;
     color: white;
     font-weight: 600;
+    //Used when black text is needed instead of white
+    &.black{color:black;}
+    //Appending italics, if needed
+    &.italic{font-style: italic;}
 
+    //Classes to determine the font size and weight of fonts
     &.regular{font-size: 24px;font-weight: 500;}
     &.smallSubheading{font-size: 28px;}
     &.subheading{font-size: 32px;}
     &.heading{font-size: 68px;}
     &.title{font-size: 80px;}
-    &.boldRegular{font-size: 24px;font-weight: 600;}
+    &.boldRegular{font-size: 24px;}
+}
+
+//Styling images on the website
+img{
+    //Styling circle images
+    &.circleImg{
+        border-radius: 50%;
+        object-fit: cover;
+        cursor: pointer;
+
+        //Determining the size of the images
+        &.homeScreenImg{
+            height:10vh;
+            width:10vh;
+        }
+
+        &.contactImg{
+            height:12vh;
+            width:12vh;
+        }
+
+        &.skillsImg{
+            height:10vh;
+            max-width: 9vw;
+        }
+
+        //Adding a rotation motion to the image
+        &.rotating{
+            &:hover{
+                animation: rotateMotion 4s ease-in-out infinite;
+            }
+        }
+    }
+
+    //Styling the photo area image
+    &.photoAreaImg{
+        height: 60vh;
+        width: 20vw;
+        border: 2px solid black;
+        border-radius: 25px;
+    }
+
+    //Styling the mainProjectImg
+    &.mainProjectImg{
+        height: 35vh;
+        width: 40vw;
+    }
+
+    //Styling the smallProjectImg
+    &.smallProjectImg{
+        height:40px;
+        width:40px;
+    }
+}
+
+//Styling the buttons on the website
+button{
+    
+}
+
+//Code to give an item a basic display flex body
+.flexDisplay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    //Determining the size of the gap
+    &.smallWidthGap{gap:3vw;}
+    &.widthGap{gap:5vw;}
+    &.smallHeightGap{gap:2vh;}
+    &.heightGap{gap:5vh;}
+    &.noGap{gap:0px;}
+    &.verySmallGap{gap:5px;}
+    &.smallGap{gap:10px;}
+    &.gap{gap:20px;}
+
+    //Appending flex-direction:column, if needed
+    &.column{flex-direction: column;}
 }
 
 /* Code given to all flexItems */
@@ -56,13 +143,11 @@ p{
 
             .nameTitle{
                 padding-left: 20px;
-                font-style: italic;
                 color: yellow;
             }
 
             .typingAnimation{
                 padding-left: 20px;
-                font-style: italic;
             }
 
             .HomeScreenInfo{
@@ -73,44 +158,22 @@ p{
 
             .HomeScreenLinks{
                 padding: 2vh;
-                display: flex;
                 width: 40%;
-                justify-content: center;
-                align-items: center;
-                gap: 5vw;
-
-                img{
-                    height: 10vh;
-                    width: 10vh;
-                    border-radius: 50%;
-                    object-fit: cover;
-                    cursor: pointer;
-                    transition: transform 1s;
-
-                    &:hover{
-                        animation: rotateMotion 4s ease-in-out infinite;
-                    }
-                }
 
                 a{
                     text-decoration: none;
 
                     button{
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        gap: 10px;
                         padding: 10px;
                         border-radius: 25px;
                         border: none;
                         cursor: pointer;
-                        p{color: black;}
                         span{font-size: 40px;}
                         transition: all 1s;
 
                         &:hover{
                             transform: translateY(-1vh);
-                            box-shadow: 2px 2px 2px 2px rgb(168, 168, 168);
+                            box-shadow: 2px 2px 2px 2px $lightShadow;
                         }
                     }
                 }
@@ -118,9 +181,6 @@ p{
 
             .explore{
                 width: 80%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
                 padding: 4vh 0vw;
                 
                 button{
@@ -130,7 +190,6 @@ p{
                     border-radius: 25px;
                     cursor: pointer;
                     a{text-decoration: none;}
-                    p{color: black;}
                 }
             }
         }
@@ -140,19 +199,7 @@ p{
         margin-top: 6vh;
 
         .content{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-    
-            .photoArea{
-                padding: 5%;
-                img{
-                    height: 40vh;
-                    width: 20vw;
-                    border: 2px solid black;
-                    border-radius: 25px;
-                }
-            }
+            padding: 0vh 8vw;
     
             .infoArea{
                 padding: 5%;
@@ -163,46 +210,17 @@ p{
     }
 
     &#skills{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        gap: 5vh;
         margin-top: 2vh;
         margin-bottom: 3vh;
 
         .skillsArea{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            gap: 20px;
-
             .skillsRow{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 5vw;
-    
                 .skill{
                     height: 18vh;
                     width: 18vh;
-                    background-color: rgb(215, 215, 215);
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    flex-direction: column;
-                    gap: 5px;
-                    box-shadow: 4px 4px 4px 4px rgb(168, 168, 168);
+                    background-color: $lightBackground;
+                    box-shadow: 4px 4px 4px 4px $lightShadow;
                     transition: transform 2s;
-                    p{color:black;}
-
-                    img{
-                        height: 10vh;
-                        max-width: 9vw;
-                        border-radius: 50%;
-                        object-fit: cover;
-                    }
 
                     &:hover{
                         transform: translateY(-2vh);
@@ -221,9 +239,6 @@ p{
         .mainProjectRow, .smallProjectRow{
             padding-top: 5vh;
             padding-bottom: 5vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
 
         .emptyMainProject{height:30vh;width:40vw;}
@@ -237,16 +252,12 @@ p{
             width: 40vw;
             position: relative;
             overflow-y: hidden;
-            box-shadow: 4px 4px 4px 4px rgb(168, 168, 168);
+            box-shadow: 4px 4px 4px 4px $lightShadow;
 
             img{
-                height: 35vh;
-                width: 40vw;
                 position: absolute;
                 top: 0;
                 left: 0;
-
-                
             }
 
             .projectContent{
@@ -257,17 +268,8 @@ p{
                 left: 0;
                 opacity: 0;
                 z-index: 2;
-                background-color: rgb(168, 168, 168);
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 6px;
-                flex-direction: column;
-
-                p{
-                    padding: 0px 10px;
-                    color:black;
-                }
+                background-color: $lightShadow;
+                p{padding: 0px 10px;}
                 transition: opacity 1s;
             }
             
@@ -279,11 +281,7 @@ p{
             }
 
             .buttonArea{
-                display: flex;
-                justify-content: center;
-                align-items: center;
                 padding: 10px;
-                gap: 10%;
 
                 button{
                     padding: 10px;
@@ -291,7 +289,7 @@ p{
                     border: none;
                     border-radius: 25px;
                     cursor: pointer;
-                    background-color: rgb(255, 255, 255);
+                    background-color: white;
                     transition: background-color 1s;
                     opacity: 1;
                     color: black;
@@ -309,29 +307,17 @@ p{
         .smallProject{
             width: 25vw;
             height: 20vh;
-            background-color: rgb(212, 212, 212);
-            box-shadow: 4px 4px 4px 4px rgb(168, 168, 168);
+            background-color: $lightBackground;
+            box-shadow: 4px 4px 4px 4px $lightShadow;
             text-align-last: center;
             padding: 10px;
             transition: transform 2s;
-
-            p{
-                color: black;
-            }
             
             .headerLine{
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 margin: 5px;
-                
-                img{
-                    cursor: pointer;
-                    height: 30px;
-                    width:30px;
-                    border-radius: 50%;
-                    object-fit: cover;
-                }
             }
 
             &:hover{
@@ -340,35 +326,24 @@ p{
         }
 
         .skillsLine{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 2vw;
-            padding: 5px;
-        }
+            padding: 5px;}
 
         .showMoreLess{
             padding: 2vh 10vw 2vh 10vw;
             border-radius: 20px;
             border: none;
-            box-shadow: 4px 4px 4px 4px rgb(168, 168, 168);
+            box-shadow: 4px 4px 4px 4px $lightShadow;
             cursor: pointer;
-            p{color: black;}
         }
     }
 
     &#experience{
         .experienceItems{
             padding: 5vh 0vw;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            gap: 5vh;
 
             .experienceItem{
                 border-radius: 40px;
-                box-shadow: 4px 4px 4px 4px rgb(168, 168, 168);
+                box-shadow: 4px 4px 4px 4px $lightShadow;
                 padding: 2vh 2vw;
                 display: flex;
                 justify-content: start;
@@ -376,7 +351,7 @@ p{
                 text-align-last: left;
                 width: 80vw;
                 height: 20vh;
-                background-color: rgb(212, 212, 212);
+                background-color: $lightBackground;
                 
                 .imageLocation{
                     img{
@@ -388,9 +363,7 @@ p{
                 .content{
                     flex: 4 4;
                     p{
-                        color:black;
                         padding: 2px;
-                        &.role{font-style: italic;}
                     }
                 }
             }
@@ -399,49 +372,20 @@ p{
 
     &#contactMe{
         width: 90vw;
-        p{color: black;padding-bottom: 2vh;}
+        p{padding-bottom: 2vh;}
         padding-left: 5vw;
 
         .contactArea{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 5vw;
             margin-right: 5vw;
-
-            .contactLeft{
-                img{
-                    height: 12vh;
-                    width: 12vh;
-                    padding: 20px;
-                    border: none;
-                    border-radius: 50%;
-                    object-fit: cover;
-                    cursor: pointer;
-
-                    &:hover{
-                        animation: rotateMotion 4s ease-in-out infinite;
-                    }
-                }
-            }
 
             .contactRight{
                 flex: 2 2;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-                background-color: rgb(196, 196, 196);
+                background-color: $lightBackground;
                 border-radius: 25px;
                 padding: 10px;
 
                 form{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    flex-direction: column;
                     width: 90%;
-                    gap: 2vh;
 
                     input{
                         width: 80%;
