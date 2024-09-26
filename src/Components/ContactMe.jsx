@@ -89,7 +89,7 @@ function ContactMe() {
               placeholder="Enter the Title..."
             />
             <textarea rows="4" onChange={(e) => setMessage(e.target.value)} value={message} placeholder="Enter your Message..."></textarea>
-            <button onClick={() => sendEmail()} type="button">Send Message</button>
+            <button className="contactButton" onClick={() => sendEmail()} type="button">Send Message</button>
           </form>
           {errorMsg != "" ? (
             <p className="error boldRegular">{errorMsg}</p>

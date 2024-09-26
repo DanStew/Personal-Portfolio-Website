@@ -84,14 +84,58 @@ img{
 
     //Styling the smallProjectImg
     &.smallProjectImg{
-        height:40px;
-        width:40px;
+        height:4vh;
+        width:4vh;
     }
 }
 
 //Styling the buttons on the website
 button{
-    
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 10px;
+
+    &.homeScreenLinksButton{
+        span{font-size: 40px;}
+        transition: all 1s;
+
+        &:hover{
+            transform: translateY(-1vh);
+            box-shadow: 2px 2px 2px 2px $lightShadow;
+        }
+    }
+
+    &#ExploreButton{
+        width: 30vw;
+        height: 10vh;
+        a{text-decoration: none;}
+    }
+
+    &.mainProjectButton{
+        width: 100%;
+        background-color: white;
+        transition: background-color 1s;
+        opacity: 1;
+        color: black;
+        font-size: 24px;
+
+        &:hover{
+            background-color: rgb(226, 226, 226);
+        }
+    }
+
+    &.contactButton{
+        width: 60%;
+        font-size: 50px;
+        transition: background-color 1s;
+        background-color: rgb(70, 70, 70);
+        color: white;
+
+        &:hover{
+            background-color: rgb(40, 40, 40);
+        }
+    }
 }
 
 //Code to give an item a basic display flex body
@@ -136,18 +180,18 @@ button{
             left: 0;
             height: 90vh;
             z-index: 1;
-            padding-top: 20px;
+            padding-top: 2vh;
             padding-left: 10vw;
             text-align: left;
             line-height: 1.5;
 
             .nameTitle{
-                padding-left: 20px;
+                padding-left: 2vw;
                 color: yellow;
             }
 
             .typingAnimation{
-                padding-left: 20px;
+                padding-left: 2vw;
             }
 
             .HomeScreenInfo{
@@ -163,34 +207,13 @@ button{
                 a{
                     text-decoration: none;
 
-                    button{
-                        padding: 10px;
-                        border-radius: 25px;
-                        border: none;
-                        cursor: pointer;
-                        span{font-size: 40px;}
-                        transition: all 1s;
-
-                        &:hover{
-                            transform: translateY(-1vh);
-                            box-shadow: 2px 2px 2px 2px $lightShadow;
-                        }
-                    }
+                    
                 }
             }
 
             .explore{
                 width: 80%;
                 padding: 4vh 0vw;
-                
-                button{
-                    width: 30vw;
-                    height: 10vh;
-                    border: none;
-                    border-radius: 25px;
-                    cursor: pointer;
-                    a{text-decoration: none;}
-                }
             }
         }
     }
@@ -217,7 +240,7 @@ button{
             .skillsRow{
                 .skill{
                     height: 18vh;
-                    width: 18vh;
+                    width: 10vw;
                     background-color: $lightBackground;
                     box-shadow: 4px 4px 4px 4px $lightShadow;
                     transition: transform 2s;
@@ -229,7 +252,7 @@ button{
 
                 .empty{
                     height: 18vh;
-                    width: 18vh;
+                    width: 10vw;
                 }
             }
         }
@@ -282,24 +305,6 @@ button{
 
             .buttonArea{
                 padding: 10px;
-
-                button{
-                    padding: 10px;
-                    width: 100%;
-                    border: none;
-                    border-radius: 25px;
-                    cursor: pointer;
-                    background-color: white;
-                    transition: background-color 1s;
-                    opacity: 1;
-                    color: black;
-                    font-size: 24px;
-                    font-weight: 600;
-
-                    &:hover{
-                        background-color: rgb(226, 226, 226);
-                    }
-                }
             }
             
         }
@@ -310,18 +315,18 @@ button{
             background-color: $lightBackground;
             box-shadow: 4px 4px 4px 4px $lightShadow;
             text-align-last: center;
-            padding: 10px;
+            padding: 1vh;
             transition: transform 2s;
             
             .headerLine{
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                margin: 5px;
+                margin: 0.5vh;
             }
 
             &:hover{
-                transform: translateY(-20px);
+                transform: translateY(-2vh);
             }
         }
 
@@ -407,23 +412,6 @@ button{
                         font-size: 28px;
                         color:rgb(54, 53, 53);
                         font-weight: 600;
-                    }
-                }
-
-                button{
-                    width: 60%;
-                    padding: 10px;
-                    font-size: 50px;
-                    font-weight: 600;
-                    border: none;
-                    border-radius: 40px;
-                    transition: background-color 1s;
-                    background-color: rgb(70, 70, 70);
-                    color: white;
-                    cursor: pointer;
-
-                    &:hover{
-                        background-color: rgb(40, 40, 40);
                     }
                 }
             }

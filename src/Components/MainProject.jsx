@@ -18,8 +18,8 @@ function MainProject({image,title,description,skills,liveLink,githubLink,finishe
                 </div>
                 {/* Displaying the buttons and links to the user */}
                 <div className="buttonArea flexDisplay smallWidthGap">
-                    {liveLink != "" ? <button onClick={() => window.open(liveLink)}>Live</button> : <div display={{display:"none"}}></div>}
-                    <button onClick={() => window.open(githubLink)}>Github</button>
+                    {liveLink != "" ? <button className="mainProjectButton" onClick={() => window.open(liveLink)}>Live</button> : <div display={{display:"none"}}></div>}
+                    <button className="mainProjectButton" onClick={() => window.open(githubLink)}>Github</button>
                 </div>
             </div>
         </div>
