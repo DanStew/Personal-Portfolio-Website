@@ -1,4 +1,4 @@
-import linkedIn from "../Images/linkedInLogo.jpg"
+import DanielStewartPhoto from "../Images/DanielStewartPhoto.jpg"
 
 function AboutMe(){
     return(
@@ -6,7 +6,7 @@ function AboutMe(){
             <p id="AboutMeTitle" className="heading">About Me</p>
             <div className="content flexDisplay noGap">
                 <div className="photoArea flexItems">
-                    <img className="photoAreaImg" src={linkedIn} alt="Photo of Me" />
+                    <img className="photoAreaImg" src={DanielStewartPhoto} alt="Photo of Me" />
                 </div>
                 <div id="InfoArea" className="infoArea flexDisplay column smallHeightGap flexItems">
                     <p className="subheading">Hello, my name is Daniel Stewart. I am currently a second year student studying Computer Science at the University of Leicester.</p>

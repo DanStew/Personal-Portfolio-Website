@@ -64,8 +64,6 @@ img{
 
     //Styling the photo area image
     &.photoAreaImg{
-        height: 60vh;
-        width: 20vw;
         border: 2px solid black;
         border-radius: 25px;
     }
@@ -165,6 +163,12 @@ button{
         textarea{font-size: 28px;}
         &::placeholder{font-size: 28px;}
     }
+
+    //Styling the about me img
+    .photoAreaImg{
+        height: 40vh;
+        width: 20vw;
+    }
 }
 
 @media screen and (min-width : 1080px) and (max-width : 1360px) {
@@ -201,6 +205,12 @@ button{
         input{font-size: 26px;}
         textarea{font-size: 26px;}
         &::placeholder{font-size: 26px;}
+    }
+
+    //Styling the about me img
+    .photoAreaImg{
+        height: 40vh;
+        width: 20vw;
     }
 }
 
@@ -239,6 +249,12 @@ button{
         textarea{font-size: 20px;}
         &::placeholder{font-size: 20px;}
     }
+
+    //Styling the about me img
+    .photoAreaImg{
+        height: 30vh;
+        width: 20vw;
+    }
 }
 
 @media screen and (min-width:560px) and (max-width : 800px) {
@@ -275,6 +291,12 @@ button{
         input{font-size: 18px;}
         textarea{font-size: 14px;}
         &::placeholder{font-size: 18px;}
+    }
+
+    //Styling the about me img
+    .photoAreaImg{
+        height: 30vh;
+        width: 20vw;
     }
 }
 
@@ -362,6 +384,13 @@ button{
     &#aboutMe{
         margin-top: 6vh;
         z-index: 1;
+
+        .photoArea{
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
         .content{
             padding: 0vh 8vw;
