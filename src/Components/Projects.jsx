@@ -85,12 +85,20 @@ function Projects(){
                         finished={true}
                     />
                     <SmallProject 
+                        title="Java Bank Loan System"
+                        description="Application where the user is able to make an account and take out or track loans"
+                        skills={["Java"]}
+                        githubLink="https://github.com/DanStew/Bank-Loaning-System"
+                    />
+                    <SmallProject 
                         title="Binary Hexadecimal Converter"
                         description="Python CLI allowing you to convert between Decimal, Binary and Hexadecimal numbers"
                         skills={["Python"]}
                         githubLink="https://github.com/DanStew/BinaryHexadecimalConverter"
                         finished={true}
                     />
+                </div>
+                <div className="smallProjectRow flexDisplay noGap">
                     <SmallProject 
                         title="Practice Text Chat App"
                         description="Website that allows you to create an account and privately chat with other users"
@@ -98,8 +106,6 @@ function Projects(){
                         githubLink="https://github.com/DanStew/PracticeTextChatApp"
                         finished={true}
                     />
-                </div>
-                <div className="smallProjectRow flexDisplay noGap">
                     <SmallProject 
                         title="JavaScript Face Detection App"
                         description="Simple Javascript project that uses a camera on a webpage and detects faces and exspressions."
@@ -114,13 +120,6 @@ function Projects(){
                         githubLink="https://github.com/DanStew/Calculator-Project"
                         finished={true}
                     />
-                    <SmallProject 
-                        title="Random Number Sports"
-                        description="Collection of sport games made using P5 that uses random numbers to determine the outcome"
-                        skills={["P5"]}
-                        githubLink="https://github.com/DanStew/RandomNumberSports"
-                        finished={true}
-                    />
                 </div>
                 {/* Code to show the show more / less projects, depending on users actions  */}
                 {showMore? <button id="ShowMoreLessButton" onClick={() => setShowMore(false)} className="showMoreLess"><p className="heading black">Show Less</p></button> : <button id="ShowMoreLessButton" onClick={() => setShowMore(true)} className="showMoreLess"><p className="heading black">Show More</p></button>}
@@ -128,6 +127,13 @@ function Projects(){
                 {showMore? 
                     <div className="showMoreProjects">
                         <div className="smallProjectRow flexDisplay noGap">
+                            <SmallProject 
+                                title="Random Number Sports"
+                                description="Collection of sport games made using P5 that uses random numbers to determine the outcome"
+                                skills={["P5"]}
+                                githubLink="https://github.com/DanStew/RandomNumberSports"
+                                finished={true}
+                            />
                             <SmallProject 
                                 title="League Table and Knockout Fixture Generator"
                                 description="Website that allows you to generate a football league table or knockout tournament"
@@ -140,8 +146,9 @@ function Projects(){
                                 skills={["Python", "Pygame"]}
                                 githubLink="https://github.com/DanStew/Python-Games"
                             />
-                            {/* This is how you make an empty small project, to format them correctly */}
-                            <div className="emptySmallProject"></div>
+                            {/* This is how you make an empty small project, to format them correctly 
+                                <div className="emptySmallProject"></div>
+                            */}
                         </div>
                     </div> 
                     : <div style={{display:"none"}}></div>
