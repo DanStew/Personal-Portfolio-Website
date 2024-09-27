@@ -42,12 +42,9 @@ function HomeScreen(){
                 </div>
                 <p className="subheading">Check out my Socials : </p>
                 <div className="HomeScreenLinks flexDisplay widthGap">
-                    <a href={myCV} target="_blank"><button className="homeScreenLinksButton flexDisplay smallGap"><span className="material-symbols-outlined">file_open</span><p className="subheading black">Download My CV</p></button></a>
+                    <a href={myCV} target="_blank"><button className="homeScreenLinksButton flexDisplay smallGap"><span className="material-symbols-outlined">file_open</span><p className="smallSubheading black">Download My CV</p></button></a>
                     <img className="circleImg homeScreenImg rotating" onClick={() => window.open("https://github.com/DanStew")} src={githubLogo} alt="Open my Github" />
                     <img className="circleImg homeScreenImg rotating" onClick={() => window.open("https://www.linkedin.com/in/daniel-stewart-025107257/")} src={linkedInLogo} alt="Open my Linked In" />
-                </div>
-                <div className="explore flexDisplay noGap">
-                <a href="#ExploreButton"><button id="ExploreButton"><p className="subheading black">Explore More about Me</p></button></a>
                 </div>
             </div>
             <div id="AboutMe"></div>

@@ -28,6 +28,22 @@ p{
     &.italic{font-style: italic;};
     //Font size for the top header, as it never changes
     &.topHeader{font-size: 32px;}
+
+    //Making some of the skills different colours
+    &.Python{color:green;}
+    &.React{color:lightskyblue;}
+    &.CSS{color: blue;}
+    &.Firebase{color:red;}
+    &.Java{color:orange;}
+    &.HTML{color:orange;}
+    &.Javascript{color:yellow;}
+    &.SASS{color:red;}
+    &.Qt{color:green;}
+    &.QML{color:green;}
+    &.PySide{color:cyan;}
+    &.P5{color: red;}
+    &.FaceAPI{color: pink;}
+    &.Tkinter{color:blue;}
 }
 
 //Styling images on the website
@@ -132,12 +148,16 @@ button{
     //Styling the font styles
     p{
         //Classes to determine the font size and weight of fonts
-        &.regular{font-size: 22px;font-weight: 500;}
-        &.boldRegular{font-size: 22px;}
-        &.smallSubheading{font-size: 28px;}
+        &.regular{font-size: 20px;font-weight: 500;}
+        &.boldRegular{font-size: 20px;}
+        &.smallSubheading{font-size: 24px;}
         &.subheading{font-size: 32px;}
-        &.heading{font-size: 68px;}
-        &.title{font-size: 80px;}
+        &.heading{font-size: 64px;}
+        &.title{font-size: 70px;}
+    }
+
+    #ExploreButton{
+        display: none;
     }
 
     //Styling the buttons font styles
@@ -145,7 +165,7 @@ button{
         padding: 10px;
 
         &.homeScreenLinksButton{
-            span{font-size: 40px;}
+            span{font-size: 30px;}
         }
 
         &.mainProjectButton{
@@ -175,12 +195,12 @@ button{
     //Styling the font styles
     p{
         //Classes to determine the font size and weight of fonts
-        &.regular{font-size: 20px;font-weight: 500;}
-        &.boldRegular{font-size: 20px;}
+        &.regular{font-size: 18px;font-weight: 500;}
+        &.boldRegular{font-size: 18px;}
         &.smallSubheading{font-size: 24px;}
         &.subheading{font-size: 26px;}
         &.heading{font-size: 56px;}
-        &.title{font-size: 68px;}
+        &.title{font-size: 64px;}
     }
 
     //Styling the buttons font styles
@@ -188,7 +208,7 @@ button{
         padding: 10px;
 
         &.homeScreenLinksButton{
-            span{font-size: 32px;}
+            span{font-size: 26px;}
         }
 
         &.mainProjectButton{
@@ -218,12 +238,12 @@ button{
     //Styling the font styles
     p{
         //Classes to determine the font size and weight of fonts
-        &.regular{font-size: 16px;font-weight: 500;}
-        &.smallSubheading{font-size: 20px;}
-        &.subheading{font-size: 22px;}
-        &.heading{font-size: 40px;}
-        &.title{font-size: 50px;}
-        &.boldRegular{font-size: 16px;}
+        &.regular{font-size: 12px;font-weight: 500;}
+        &.boldRegular{font-size: 12px;}
+        &.smallSubheading{font-size: 16px;}
+        &.subheading{font-size: 20px;}
+        &.heading{font-size: 50px;}
+        &.title{font-size: 56px;}
     }
 
     //Styling the buttons font styles
@@ -231,7 +251,7 @@ button{
         padding: 5px;
 
         &.homeScreenLinksButton{
-            span{font-size: 28px;}
+            span{font-size: 24px;}
         }
 
         &.mainProjectButton{
@@ -261,12 +281,12 @@ button{
     //Styling the font styles
     p{
         //Classes to determine the font size and weight of fonts
-        &.regular{font-size: 14px;font-weight: 500;}
-        &.boldRegular{font-size: 14px;}
-        &.smallSubheading{font-size: 18px;}
-        &.subheading{font-size: 20px;}
-        &.heading{font-size: 32px;}
-        &.title{font-size: 44px;}
+        &.regular{font-size: 10px;font-weight: 500;}
+        &.boldRegular{font-size: 10px;}
+        &.smallSubheading{font-size: 14px;}
+        &.subheading{font-size: 18px;}
+        &.heading{font-size: 46px;}
+        &.title{font-size: 50px;}
     }
 
     //Styling the buttons font styles
@@ -274,7 +294,7 @@ button{
         padding: 5px;
 
         &.homeScreenLinksButton{
-            span{font-size: 22px;}
+            span{font-size: 20px;}
         }
 
         &.mainProjectButton{
@@ -291,6 +311,49 @@ button{
         input{font-size: 18px;}
         textarea{font-size: 14px;}
         &::placeholder{font-size: 18px;}
+    }
+
+    //Styling the about me img
+    .photoAreaImg{
+        height: 30vh;
+        width: 20vw;
+    }
+}
+
+@media screen and (max-width:560px){
+    //Styling the font styles
+    p{
+        //Classes to determine the font size and weight of fonts
+        &.regular{font-size: 10px;font-weight: 500;}
+        &.boldRegular{font-size: 10px;}
+        &.smallSubheading{font-size: 14px;}
+        &.subheading{font-size: 18px;}
+        &.heading{font-size: 40px;}
+        &.title{font-size: 46px;}
+    }
+
+    //Styling the buttons font styles
+    button{
+        padding: 5px;
+
+        &.homeScreenLinksButton{
+            span{font-size: 12px;}
+        }
+
+        &.mainProjectButton{
+            font-size: 10px;
+        }
+
+        &.contactButton{
+            font-size: 18px;
+        }
+    }
+
+    //Styling the inputs font sizes
+    form{
+        input{font-size: 12px;}
+        textarea{font-size: 10px;}
+        &::placeholder{font-size: 12px;}
     }
 
     //Styling the about me img
@@ -333,6 +396,7 @@ button{
     padding: 5vh 0vw;
 
     &#HomeScreen{
+        height: 100%;
         padding: 0px;
         z-index: 5;
 
