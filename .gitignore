@@ -11,6 +11,9 @@
 # production
 /build
 
+#Hiding Configuration files
+/Config
+
 # misc
 .DS_Store
 .env.local
