@@ -12,7 +12,7 @@
 /build
 
 #Hiding Configuration files
-/Config
+/src/Config
 
 # misc
 .DS_Store
