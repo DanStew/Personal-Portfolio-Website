@@ -60,7 +60,7 @@ function ContactMe() {
       <div className="contactArea flexDisplay widthGap flexItems">
         <div className="contactLeft flexItems">
           <p className="heading">Email : </p>
-          <p className="subheading">danielstewarts2004@gmail.com</p>
+          <p className="bigSubheading">danielstewarts2004@gmail.com</p>
           <p className="heading">Socials : </p>
           <div className="socialsLine flexDisplay gap">
             <img className="circleImg contactImg rotating" src={githubLogo} onClick={() => window.open("https://github.com/DanStew")} alt="Linked In Logo and Link" />

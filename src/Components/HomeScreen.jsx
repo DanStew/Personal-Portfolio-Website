@@ -9,7 +9,7 @@ import myCV from "../DanielStewartCV.pdf"
 
 function HomeScreen(){
     return(
-        <div id="HomeScreen" className="screen">
+        <div id="HomeScreen" className="screen flexDisplay column">
             <div className="backgroundSquares">
                 <div className="animatedSquare"></div>
                 <div className="animatedSquare"></div>

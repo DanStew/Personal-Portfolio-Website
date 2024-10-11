@@ -28,6 +28,8 @@ p{
     &.italic{font-style: italic;};
     //Font size for the top header, as it never changes
     &.topHeader{font-size: 32px;}
+    //Removing bold styling
+    &.notBold{font-weight: 500;}
 
     //Making some of the skills different colours
     &.Python{color:green;}
@@ -65,11 +67,6 @@ img{
             width:12vh;
         }
 
-        &.skillsImg{
-            height:10vh;
-            max-width: 9vw;
-        }
-
         //Adding a rotation motion to the image
         &.rotating{
             &:hover{
@@ -82,12 +79,6 @@ img{
     &.photoAreaImg{
         border: 2px solid black;
         border-radius: 25px;
-    }
-
-    //Styling the mainProjectImg
-    &.mainProjectImg{
-        height: 35vh;
-        width: 40vw;
     }
 
     //Styling the smallProjectImg
@@ -152,6 +143,7 @@ button{
         &.boldRegular{font-size: 20px;}
         &.smallSubheading{font-size: 24px;}
         &.subheading{font-size: 32px;}
+        &.bigSubheading{font-size: 40px;}
         &.heading{font-size: 64px;}
         &.title{font-size: 70px;}
     }
@@ -189,6 +181,45 @@ button{
         height: 40vh;
         width: 20vw;
     }
+
+    //Styling the size of the skills on the website
+    .skill{
+        height: 18vh;
+        width: 10vw;
+    }
+
+    .skillsImg{
+        height:10vh;
+        max-width: 9vw;
+    }
+
+    //Styling the sizes of the projects
+    .mainProject{
+        height: 35vh;
+        width: 40vw;
+
+        .projectContent{
+            height: 30vh;
+            width: 40vw;
+        }
+    }
+
+    //Styling the mainProjectImg
+    .mainProjectImg{
+        height: 35vh;
+        width: 40vw;
+    }
+
+    .smallProject{
+        width: 25vw;
+        height: 20vh;
+    }
+
+    //Styling the experience img
+    .experienceImg{
+        height:20vh;
+        width: 20vh;
+    }
 }
 
 @media screen and (min-width : 1080px) and (max-width : 1360px) {
@@ -199,6 +230,7 @@ button{
         &.boldRegular{font-size: 18px;}
         &.smallSubheading{font-size: 24px;}
         &.subheading{font-size: 26px;}
+        &.bigSubheading{font-size: 36px;}
         &.heading{font-size: 56px;}
         &.title{font-size: 64px;}
     }
@@ -232,6 +264,45 @@ button{
         height: 40vh;
         width: 20vw;
     }
+
+    //Styling the size of the skills on the website
+    .skill{
+        height: 18vh;
+        width: 12vw;
+    }
+
+    .skillsImg{
+        height:10vh;
+        max-width: 10vw;
+    }
+
+    //Styling the sizes of the projects
+    .mainProject{
+        height: 35vh;
+        width: 40vw;
+
+        .projectContent{
+            height: 30vh;
+            width: 40vw;
+        }
+    }
+
+    //Styling the mainProjectImg
+    .mainProjectImg{
+        height: 35vh;
+        width: 40vw;
+    }
+
+    .smallProject{
+        width: 25vw;
+        height: 20vh;
+    }
+
+    //Styling the experience img
+    .experienceImg{
+        height:20vh;
+        width: 20vh;
+    }
 }
 
 @media screen and (min-width: 800px) and (max-width : 1080px) {
@@ -242,6 +313,7 @@ button{
         &.boldRegular{font-size: 12px;}
         &.smallSubheading{font-size: 16px;}
         &.subheading{font-size: 20px;}
+        &.bigSubheading{font-size: 32px;}
         &.heading{font-size: 50px;}
         &.title{font-size: 56px;}
     }
@@ -275,6 +347,45 @@ button{
         height: 30vh;
         width: 20vw;
     }
+
+    //Styling the size of the skills on the website
+    .skill{
+        height: 18vh;
+        width: 16vw;
+    }
+
+    .skillsImg{
+        height:10vh;
+        max-width: 14vw;
+    }
+
+    //Styling the sizes of the projects
+    .mainProject{
+        height: 35vh;
+        width: 40vw;
+
+        .projectContent{
+            height: 30vh;
+            width: 40vw;
+        }
+    }
+
+    //Styling the mainProjectImg
+    .mainProjectImg{
+        height: 35vh;
+        width: 40vw;
+    }
+
+    .smallProject{
+        width: 25vw;
+        height: 20vh;
+    }
+
+    //Styling the experience img
+    .experienceImg{
+        height:16vh;
+        width: 16vh;
+    }
 }
 
 @media screen and (min-width:560px) and (max-width : 800px) {
@@ -285,6 +396,7 @@ button{
         &.boldRegular{font-size: 10px;}
         &.smallSubheading{font-size: 14px;}
         &.subheading{font-size: 18px;}
+        &.bigSubheading{font-size: 28px;}
         &.heading{font-size: 46px;}
         &.title{font-size: 50px;}
     }
@@ -315,8 +427,55 @@ button{
 
     //Styling the about me img
     .photoAreaImg{
-        height: 30vh;
+        height: 20vh;
+        width: 30vw;
+    }
+
+    //Styling the size of the skills on the website
+    .skill{
+        height: 18vh;
         width: 20vw;
+    }
+
+    .skillsImg{
+        height:10vh;
+        max-width: 18vw;
+    }
+
+    //Making default flexDisplay to be in a column
+    .flexDisplay{flex-direction: column;}
+
+    //Styling the sizes of the projects
+    .mainProject{
+        height: 35vh;
+        width: 80vw;
+
+        .projectContent{
+            .subheading{font-size: 24px;}
+            .regular{font-size: 16px;}
+            .boldRegular{font-size: 16px;}
+            height: 30vh;
+            width: 80vw;
+        }
+    }
+
+    //Styling the mainProjectImg
+    .mainProjectImg{
+        height: 35vh;
+        width: 80vw;
+    }
+
+    .smallProject{
+        width: 30vw;
+        min-height: 20vh;
+        .boldRegular{font-size: 16px;}
+        .regular{font-size: 16px;}
+    }
+
+    //Styling the experience img
+    .experienceImg{
+        height:16vh;
+        width: 16vh;
     }
 }
 
@@ -328,6 +487,7 @@ button{
         &.boldRegular{font-size: 10px;}
         &.smallSubheading{font-size: 14px;}
         &.subheading{font-size: 18px;}
+        &.bigSubheading{font-size: 26px;}
         &.heading{font-size: 40px;}
         &.title{font-size: 46px;}
     }
@@ -358,8 +518,55 @@ button{
 
     //Styling the about me img
     .photoAreaImg{
-        height: 30vh;
-        width: 20vw;
+        height: 20vh;
+        width: 30vw;
+    }
+
+    //Styling the size of the skills on the website
+    .skill{
+        height: 18vh;
+        width: 24vw;
+    }
+
+    .skillsImg{
+        height:10vh;
+        max-width: 22vw;
+    }
+
+    //Making default flexDisplay to be in a column
+    .flexDisplay{flex-direction: column;}
+
+    //Styling the sizes of the projects
+    .mainProject{
+        height: 35vh;
+        width: 80vw;
+
+        .projectContent{
+            height: 30vh;
+            width: 80vw;
+            .subheading{font-size: 20px;}
+            .regular{font-size: 14px;}
+            .boldRegular{font-size: 14px;}
+        }
+    }
+
+    //Styling the mainProjectImg
+    .mainProjectImg{
+        height: 35vh;
+        width: 80vw;
+    }
+
+    .smallProject{
+        width: 30vw;
+        min-height: 20vh;
+        .boldRegular{font-size: 14px;}
+        .regular{font-size: 14px;}
+    }
+
+    //Styling the experience img
+    .experienceImg{
+        height:12vh;
+        width: 12vh;
     }
 }
 
@@ -428,6 +635,8 @@ button{
             }
 
             .HomeScreenLinks{
+                flex-direction: row;
+                margin-left: 5vw;
                 padding: 2vh;
                 width: 40%;
 
@@ -472,23 +681,23 @@ button{
         margin-bottom: 3vh;
 
         .skillsArea{
-            .skillsRow{
-                .skill{
-                    height: 18vh;
-                    width: 10vw;
-                    background-color: $lightBackground;
-                    box-shadow: 4px 4px 4px 4px $lightShadow;
-                    transition: transform 2s;
+            width: 80%;
+            flex-direction: row;
+            flex-wrap: wrap;
 
-                    &:hover{
-                        transform: translateY(-2vh);
-                    }
-                }
+            .skill{
+                background-color: $lightBackground;
+                box-shadow: 4px 4px 4px 4px $lightShadow;
+                transition: transform 2s;
 
-                .empty{
-                    height: 18vh;
-                    width: 10vw;
+                &:hover{
+                    transform: translateY(-2vh);
                 }
+            }
+
+            .empty{
+                height: 18vh;
+                width: 10vw;
             }
         }
     }
@@ -502,12 +711,13 @@ button{
         .emptyMainProject{height:30vh;width:40vw;}
         .emptySmallProject{height:20vh;width:25vw;}
 
+        .mainProjects, .smallProjects, .showMoreProjects{padding: 5vh; flex-direction: row; flex-wrap: wrap;}
+
+
         .mainProjectRow{gap:10vw;}
         .smallProjectRow{gap:5vw;}
 
         .mainProject{
-            height: 35vh;
-            width: 40vw;
             position: relative;
             overflow-y: hidden;
             box-shadow: 4px 4px 4px 4px $lightShadow;
@@ -521,8 +731,6 @@ button{
 
             .projectContent{
                 position: relative;
-                height: 30vh;
-                width: 40vw;
                 position: absolute;
                 bottom: 0;
                 left: 0;
@@ -542,13 +750,12 @@ button{
 
             .buttonArea{
                 padding: 10px;
+                flex-direction: row;
             }
             
         }
 
         .smallProject{
-            width: 25vw;
-            height: 20vh;
             background-color: $lightBackground;
             box-shadow: 4px 4px 4px 4px $lightShadow;
             text-align-last: center;
@@ -568,6 +775,8 @@ button{
         }
 
         .skillsLine{
+            flex-direction: row;
+            flex-wrap: wrap;
             padding: 5px;}
 
         .showMoreLess{
@@ -592,7 +801,7 @@ button{
                 align-items: start;
                 text-align-last: left;
                 width: 80vw;
-                height: 20vh;
+                min-height: 20vh;
                 background-color: $lightBackground;
                 
                 .imageLocation{
@@ -619,6 +828,8 @@ button{
 
         .contactArea{
             margin-right: 5vw;
+
+            .socialsLine{flex-direction: row;}
 
             .contactRight{
                 flex: 2 2;

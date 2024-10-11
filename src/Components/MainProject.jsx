@@ -2,7 +2,7 @@ function MainProject({image,title,description,skills,liveLink,githubLink,documen
     return(
         <div className="mainProject">
             <img className="mainProjectImg" src={image} alt={title + "project image"} />
-            <div className="projectContent flexDisplay column verySmallGap">
+            <div className="projectContent flexDisplay column">
                 <p className="subheading black">{title}</p>
                 <p className="regular black">{description}</p>
                 {/* Displaying the skills onto the project */}

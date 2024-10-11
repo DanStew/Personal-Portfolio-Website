@@ -20,29 +20,21 @@ function Skills(){
     return(
         <div id="skills" className="screen flexDisplay column heightGap">
             <p className="heading">My Skills</p>
-            <div className="skillsArea flexDisplay column gap">
-                <div className="skillsRow flexDisplay widthGap">
+            <div className="skillsArea flexDisplay gap">
                     <Skill img={htmlLogo} text={"HTML"}/> 
                     <Skill img={javascriptLogo} text={"Javascript"}/>
                     <Skill img={cssLogo} text={"CSS"}/>
                     <Skill img={pythonLogo} text={"Python"}/> 
                     <Skill img={javaLogo} text={"Java"}/> 
-                </div>
-                <div className="skillsRow flexDisplay widthGap">
                     <Skill img={reactLogo} text={"React"}/>
                     <Skill img={firebaseLogo} text={"Firebase"}/>
                     <Skill img={pysideLogo} text={"PySide"}/> 
                     <Skill img={qmlLogo} text={"QML"}/>
                     <Skill img={qtLogo} text={"Qt"}/>
-                </div>
-                <div id="LastSkillRow" className="skillsRow flexDisplay widthGap">
                     <Skill img={pygameLogo} text={"Pygame"}/>
                     <Skill img={openCvLogo} text={"OpenCV"}/>
                     <Skill img={emailJsLogo} text={"Email JS"}/>
                     <Skill img={sassLogo} text={"SASS"}/> 
-                    {/* Making an empty skills so there are all properly formatted */}
-                    <div className="empty"></div>
-                </div>
             </div>
             <div id="Projects"></div>
         </div>
